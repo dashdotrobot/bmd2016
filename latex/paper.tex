@@ -81,11 +81,35 @@ The rim is modeled as an initially circular beam with a constant cross-section.
 
 \subsection{Spoke equations}
 
-In this paper we consider bicycle wheels with slender prestressed spokes. We model a single spoke as an elastic bar pinned at each end. This ensures that the spoke force is always collinear with the spoke axis. The linearized elongation of a spoke is given by
-\begin{equation}\label{eq:elong}
-\Delta l = (\bm{u}_2 - \bm{u}_1)\cdot \hat{\bm{n}}_0
+In this paper we consider bicycle wheels with slender prestressed spokes. We model a single spoke as an elastic bar pinned at each end. This ensures that the spoke force is always collinear with thes spoke axis. We fix our global coordinate system to the hub, which is assumed to be rigid. Therefore, the displacement of the hub node of a spoke is zero. The linearized elongation of a spoke is given by
+\begin{equation}\label{eq:selong}
+\Delta l = \bm{u}_n\cdot \hat{\bm{n}}_1
 \end{equation}
-where $\bm{u}_1$ and $\bm{u}_2$ are the displacement vectors of the two nodes of the spoke and $\hat{\bm{n}}_0$ is a unit vector pointing from node 1 to node 2.
+where $\bm{u}_n$ is the displacement vector of the spoke nipple and $\hat{\bm{n}}_1$ is a unit vector pointing from the spoke nipple to the hub eyelet. The linearized rotation of the spoke is given by
+\begin{equation}\label{eq:srot1}
+\Omega_1 = \frac{1}{l} \bm{u}_n\cdot \hat{\bm{n}}_2
+\end{equation}
+\begin{equation}\label{eq:srot2}
+\Omega_2 = \frac{1}{l} \bm{u}_n\cdot \hat{\bm{n}}_3
+\end{equation}
+where $\hat{\bm{n}}_2$ and $\hat{\bm{n}}_3$ are two orthogonal unit vectors orthogonal to $\hat{\bm{n}}_1$, and $l$ is the spoke length.
+
+The elongation produces a net force on the rim parallel to the original spoke axis equal to
+\begin{equation}\label{eq:sF1}
+f_1 = \left(\frac{E_sA_s\Delta l}{l}\hat{\bm{n}}_1\right) = \frac{E_sA_s}{l} \hat{\bm{n}}_1 \hat{\bm{n}}_1 \cdot \bm{u}_n 
+\end{equation}
+The rotation of the spoke produces a net force on the rim perpendicular to the original spoke axis due to the rotation of the initial tension in the spoke.
+\begin{equation}\label{eq:sF2}
+f_2 = T \sin{\chi_1} \approx \frac{T}{l} \hat{\bm{n}}_2\hat{\bm{n}}_2 \cdot \bm{u}_n
+\end{equation}
+\begin{equation}\label{eq:sF3}
+f_3 = T \sin{\chi_2} \approx \frac{T}{l} \hat{\bm{n}}_3\hat{\bm{n}}_3 \cdot \bm{u}_n
+\end{equation}
+since $\hat{\bm{n}}_1,\hat{\bm{n}}_2\hat{\bm{n}}_3$ are mutually orthogonal, the total force on the rim is given by $\bm{f} = \bm{k}_f \cdot \bm{u}_n$, where the spoke stiffness matrix is given by
+\begin{equation}\label{eq:kf}
+\bm{k}_f = \frac{E_sA_s}{l}\hat{\bm{n}}_1\hat{\bm{n}}_1 + \frac{T}{l}(\hat{\bm{n}}_2\hat{\bm{n}}_2 + \hat{\bm{n}}_3\hat{\bm{n}}_3)
+\end{equation}
+The first term in Eqn. \ref{eq:kf} is the {\bf elastic stiffness} and the second term is the {\bf tension stiffness}. The tension stiffness is the component responsible for the transverse vibrations of a guitar string, e.g.
 
 \subsection{Figures and tables}
 
