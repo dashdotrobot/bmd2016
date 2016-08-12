@@ -27,7 +27,7 @@ e-mail: j.papadopoulos@neu.edu\\[2.5ex]
 $^\dag$ Department of Civil Engineering\\
 Northwestern University\\
 2145 Sheridan Road, Evanston, IL 60208, USA\\
-e-mail: o.balogun@northwestern.edu\\
+e-mail: o-balogun@northwestern.edu\\
 \end{tabular}
 \end{center}
 
@@ -62,7 +62,9 @@ The bicycle wheel is a prestressed structure and is susceptible to buckling unde
 
 Despite its implications for wheel strength, the buckling problem has never received a rigorous treatment to our knowledge. Jobst Brandt alludes to buckling in his practical manual for wheelbuilders\cite{Brandt1993c}:
 
-``If the wheel becomes untrue in two large waves during stress relieving, the maximum, safe tension has been exceeded. Approach this tension carefully to avoid major rim distortions. When the wheel loses alignment from stress relieving, loosen all spokes a half turn before retruing the wheel.''
+\begin{quotation}
+\noindent``If the wheel becomes untrue in two large waves during stress relieving, the maximum, safe tension has been exceeded. Approach this tension carefully to avoid major rim distortions. When the wheel loses alignment from stress relieving, loosen all spokes a half turn before retruing the wheel.''
+\end{quotation}
 
 He did not discuss the problem further, but suggested that wheel failure commonly occurs due to a loss of lateral stability caused by spoke buckling. Pippard and Francis\cite{Pippard1932d} derived a model for lateral stiffness based on the elastic foundation model, but did not discuss stability and neglected any effects of spoke tension.
 
@@ -72,29 +74,18 @@ The problem of the prestressed bicycle wheel is unique for a number of reasons. 
 
 Here we derive a general theory for buckling of a spoked bicycle wheel under self-tension and investigate several special cases. Furthermore, we analyze large deformation post-buckling behavior and show how local buckling of individual spokes can lead to collapse of an otherwise sub-critical wheel.
 
+\section{DEFORMATION OF THE WHEEL}
+\subsection{Rim equations}
 
-\section{GENERAL INSTRUCTIONS}
+The rim is modeled as an initially circular beam with a constant cross-section.
 
-The paper must be written in English. It must contain the full name, address 
-and e-mail address of each author. No hard limits on the total length of the 
-paper are set, but it should better not exceed 20 pages. All page margins 
-should be 3\,cm. The paper used should have the size 210\,x\,297\, mm 
-which is the European (German) A4 size. It is suggested to use styles for 
-formatting and automatic reference, figure numbering to avoid editorial 
-errors. To avoid compatibility problems it is advised to use only upper or 
-lower case Latin alphabet, numbers and the underscore character in the file 
-name.
+\subsection{Spoke equations}
 
-
-\subsection{Equations}
-
-Equations should be numbered continuously according to the format shown in 
-Equation~(\ref{eq:equ1}): 
-\begin{equation} \label{eq:equ1}
-  e^{i\pi} + 1 = 0, 
+In this paper we consider bicycle wheels with slender prestressed spokes. We model a single spoke as an elastic bar pinned at each end. This ensures that the spoke force is always collinear with the spoke axis. The linearized elongation of a spoke is given by
+\begin{equation}\label{eq:elong}
+\Delta l = (\bm{u}_2 - \bm{u}_1)\cdot \hat{\bm{n}}_0
 \end{equation}
-where the unknown symbols are explained after the equation.
-
+where $\bm{u}_1$ and $\bm{u}_2$ are the displacement vectors of the two nodes of the spoke and $\hat{\bm{n}}_0$ is a unit vector pointing from node 1 to node 2.
 
 \subsection{Figures and tables}
 
