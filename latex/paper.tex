@@ -51,22 +51,27 @@ abstract and keywords have to fit on the title page. The Introduction
 paragraph may start already on the title page provided there is enough space.
 
 \begin{keywords}
-guidelines for authors, 
-template, 
-final symposium paper, 
-formatting instructions.
+bicycle wheel, 
+buckling, 
+bifurcation.
 \end{keywords}
 
 \section{INTRODUCTION}
 
-All text should be written in 11\,pt Times New Roman font. General text should 
-be justified and divided into logical paragraphs separated by 11\,pt spaces. 
-Single line spaces are required. All section headers except abstract and 
-references header should be numbered with Arabic numbers without a trailing 
-dot. Top level headers should be typed in capital characters. Subsections 
-should be numbered with multilevel numbering. A maximum of two sublevels is 
-allowed. Subheaders should be typed in normal word case. Font size of 11\,pt 
-should be used if not specified otherwise. 
+The bicycle wheel is a prestressed structure and is susceptible to buckling under internal forces. As the spokes are tightened uniformly, the rim deforms radially to accommodate the spoke strain. At a critical tension, the system reaches a bifurcation point and the rim buckles out of its initial plane. The post-buckling configuration is generally stable and the original shape of the wheel can be recovered by reducing the tension. Buckling can also be triggered by external forces in an otherwise stable wheel leading to a release of strain energy. This is an unstable process which generally leads to catastrophic failure.
+
+Despite its implications for wheel strength, the buckling problem has never received a rigorous treatment to our knowledge. Jobst Brandt alludes to buckling in his practical manual for wheelbuilders\cite{Brandt}:
+
+``If the wheel becomes untrue in two large waves during stress relieving, the maximum, safe tension has been exceeded. Approach this tension carefully to avoid major rim distortions. When the wheel loses alignment from stress relieving, loosen all spokes a half turn before retruing the wheel.''
+
+He did not discuss the problem further, but suggested that wheel failure commonly occurs due to a loss of lateral stability caused by spoke buckling. Pippard and Francis\cite{Pip2} derived a model for lateral stiffness based on the elastic foundation model, but did not discuss stability and neglected any effects of spoke tension.
+
+Flexural-torsional buckling of rings can be treated as a special case of buckling of arches, where the included angle is allowed to go to $2\pi$. Timoshenko and Gere\cite{Tim} gave a formula for the critical load for a ring with doubly-symmetric cross-section subjected to radial loads. The theory of flexural-torsional buckling of monosymmetric arches (bicycle rims have only one plane of symmetry) was broadly formalized by Trahair and Papangelis\cite{Tra} using the virtual work approach to derive the equilibrium and stability equations. Their theory has been extended to treat arches restrained by continuous\cite{Brad1} or discrete\cite{Brad2} elastic supports and elastic end restraints\cite{Guo}.
+
+The problem of the prestressed bicycle wheel is unique for a number of reasons. First, the buckling load is internal to the structure. Second, the spokes act both as elastic restraints resisting buckling and as prestressing elements causing buckling. Third, the lateral, radial, and torsional restraining actions of the spokes are coupled---i.e. lateral deflection at a spoke may produce lateral, radial, and torsional reactions. These considerations extend to other structural systems. Large observation wheels such as the London Eye\cite{Mann} and the Singapore Flyer\cite{All} resemble large bicycle wheels and achieve lateral stability due to the bracing angle of prestressed cables, and must be designed against flexural-torsional buckling.
+
+Here we derive a general theory for buckling of a spoked bicycle wheel under self-tension and investigate several special cases. Furthermore, we analyze large deformation post-buckling behavior and show how local buckling of individual spokes can lead to collapse of an otherwise sub-critical wheel.
+
 
 \section{GENERAL INSTRUCTIONS}
 
@@ -152,23 +157,45 @@ Dynamics 2016.
 % \bibliography{biblio}
 \begin{thebibliography}{6}
 % \begin{thebibliography}{66} % use this for more than 9 references
-\bibitem{Pac02} H.~B.~Pacejka,
-\textit{Tyre and Vehicle Dynamics},
-Butterworth and Heinemann, Oxford, 2002.
+\bibitem{Brandt} J.~Brandt, 
+\textit{The Bicycle Wheel},
+Avocet, Palo Alto, (1993).
 
-\bibitem{Ber07} E.~Bertolazzi, F.~Biral, M.~Da~Lio and V.~Cossalter,
-``The influence of rider's upper body motions on motorcycle minimum time
-  maneuvering'',
-in C.~L.~Bottasso, P.~Masarati and L.~Trainelli (eds),
-\textit{Proceedings, Multibody Dynamics 2007, ECCOMAS Thematic Conference},
-Milano, Italy, 25--28 June 2007,
-Politecnico di Milano, Milano, 2007, 15~pp.
+\bibitem{Pip2} A.J.S.~Pippard, W.E.~Francis, 
+``The Stresses in a Wire Wheel under Side Loads on the Rim'',
+\textit{Philos. Mag.} \textbf{14} (1932), pp. 436-445.
 
-\bibitem{Sha71} R.~S.~Sharp,
-``The stability and control of motorcycles'',
-\textit{Proceedings of the IMechE, Part C, Journal of Mechanical Engineering
-  Science} \textbf{13} (1971), pp.~316--329.
+\bibitem{Tim} S.P.~Timoshenko, J.M.~Gere, 
+\textit{Theory of Elastic Stability}, 
+McGraw-Hill (1961).
 
+\bibitem{Tra} N.S.~Trahair, J.P.~Papangelis, 
+``Flexural-torsional buckling of monosymmetric arches'', 
+\textit{J. Struct. Eng.} \textbf{113} (1987), pp. 2271-2288
+
+\bibitem{Brad1} Y.~-L. Pi and M.~A. Bradford, 
+``Elastic flexural-torsional buckling of continuously restrained arches'',
+\textit{Int. J. Solids Struct.} \textbf{39} (2002), pp. 2299-2322.
+
+\bibitem{Brad2} Y.~-L. Pi and M.~A. Bradford, 
+``Elastic flexural-torsional buckling of discretely restrained arches'',
+\textit{J. Struct. Eng.} \textbf{39} (2002), pp. 2299-2322.
+
+\bibitem{Guo} Y.L.~Guo, S.Y.~Zhao, C.~You, Y.L.~Pi, 
+``Out-of-Plane Elastic Buckling of Circular Arches with Elastic End Restraints'', 
+\textit{J. Struct. Eng.} \textbf{140} (9) (2014)
+
+\bibitem{BandD} C.~J. Burgoyne and R. Dilmaghanian,
+Bicycle Wheel as Prestressed Structure, 
+\textit{J. Eng. Mech.} \textbf{119} (1993), pp. 439-455.
+
+\bibitem{Mann} A.P.~Mann, N.~Thompson, M.~Smits, 
+``Building the British Airways London Eye'', 
+\textit{Proc. Inst. Civ. Eng. - Civ. Eng.} \textbf{144} (2002), pp. 60-72
+
+\bibitem{All} A.~Allsop, P.~Dallard, B.~McNiven, 
+``The Singapore Flyer and Design of Giant Observation Wheels'', 
+\textit{Struct. Eng. Int.-IABSE} \textbf{19}(1), (2009), pp. 12-16
 
 \end{thebibliography}
 
