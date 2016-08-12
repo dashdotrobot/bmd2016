@@ -31,7 +31,6 @@ e-mail: o-balogun@northwestern.edu\\
 \end{tabular}
 \end{center}
 
-
 \section*{ABSTRACT}
 
 The first page begins with the title of the paper, the authors, affiliations, 
@@ -60,17 +59,17 @@ bifurcation.
 
 The bicycle wheel is a prestressed structure and is susceptible to buckling under internal forces. As the spokes are tightened uniformly, the rim deforms radially to accommodate the spoke strain. At a critical tension, the system reaches a bifurcation point and the rim buckles out of its initial plane. The post-buckling configuration is generally stable and the original shape of the wheel can be recovered by reducing the tension. Buckling can also be triggered by external forces in an otherwise stable wheel leading to a release of strain energy. This is an unstable process which generally leads to catastrophic failure.
 
-Despite its implications for wheel strength, the buckling problem has never received a rigorous treatment to our knowledge. Jobst Brandt alludes to buckling in his practical manual for wheelbuilders\cite{Brandt1993c}:
+Despite its implications for wheel strength, the buckling problem has never received a rigorous treatment to our knowledge. Jobst Brandt alludes to buckling in his practical manual for wheelbuilders~\cite{Brandt1993c}:
 
 \begin{quotation}
 \noindent``If the wheel becomes untrue in two large waves during stress relieving, the maximum, safe tension has been exceeded. Approach this tension carefully to avoid major rim distortions. When the wheel loses alignment from stress relieving, loosen all spokes a half turn before retruing the wheel.''
 \end{quotation}
 
-He did not discuss the problem further, but suggested that wheel failure commonly occurs due to a loss of lateral stability caused by spoke buckling. Pippard and Francis\cite{Pippard1932d} derived a model for lateral stiffness based on the elastic foundation model, but did not discuss stability and neglected any effects of spoke tension.
+He did not discuss the problem further, but suggested that wheel failure commonly occurs due to a loss of lateral stability caused by spoke buckling. Pippard and Francis~\cite{Pippard1932d} derived a model for lateral stiffness based on the elastic foundation model, but did not discuss stability and neglected any effects of spoke tension.
 
-Flexural-torsional buckling of rings can be treated as a special case of buckling of arches, where the included angle is allowed to go to $2\pi$. Timoshenko and Gere\cite{Timoshenko1961a} gave a formula for the critical load for a ring with doubly-symmetric cross-section subjected to radial loads. The theory of flexural-torsional buckling of monosymmetric arches (bicycle rims have only one plane of symmetry) was broadly formalized by Trahair and Papangelis\cite{Trahair1987b} using the virtual work approach to derive the equilibrium and stability equations. Their theory has been extended to treat arches restrained by continuous\cite{Pi2002b} or discrete\cite{Bradford2002d} elastic supports and elastic end restraints\cite{Guo2014b}.
+Flexural-torsional buckling of rings can be treated as a special case of buckling of arches, where the included angle is allowed to go to $2\pi$. Timoshenko and Gere~\cite{Timoshenko1961a} gave a formula for the critical load for a ring with doubly-symmetric cross-section subjected to radial loads. The theory of flexural-torsional buckling of monosymmetric arches (bicycle rims have only one plane of symmetry) was broadly formalized by Trahair and Papangelis~\cite{Trahair1987b} using the virtual work approach to derive the equilibrium and stability equations. Their theory has been extended to treat arches restrained by continuous~\cite{Pi2002b} or discrete~\cite{Bradford2002d} elastic supports and elastic end restraints~\cite{Guo2014b}.
 
-The problem of the prestressed bicycle wheel is unique for a number of reasons. First, the buckling load is internal to the structure. Second, the spokes act both as elastic restraints resisting buckling and as prestressing elements causing buckling. Third, the lateral, radial, and torsional restraining actions of the spokes are coupled---i.e. lateral deflection at a spoke may produce lateral, radial, and torsional reactions. These considerations extend to other structural systems. Large observation wheels such as the London Eye\cite{Mann2001a} and the Singapore Flyer\cite{Allsop2009a} resemble large bicycle wheels and achieve lateral stability due to the bracing angle of prestressed cables, and must be designed against flexural-torsional buckling.
+The problem of the prestressed bicycle wheel is unique for a number of reasons. First, the buckling load is internal to the structure. Second, the spokes act both as elastic restraints resisting buckling and as prestressing elements causing buckling. Third, the lateral, radial, and torsional restraining actions of the spokes are coupled---i.e. lateral deflection at a spoke may produce lateral, radial, and torsional reactions. These considerations extend to other structural systems. Large observation wheels such as the London Eye~\cite{Mann2001a} and the Singapore Flyer~\cite{Allsop2009a} resemble large bicycle wheels and achieve lateral stability due to the bracing angle of prestressed cables, and must be designed against flexural-torsional buckling.
 
 Here we derive a general theory for buckling of a spoked bicycle wheel under self-tension and investigate several special cases. Furthermore, we analyze large deformation post-buckling behavior and show how local buckling of individual spokes can lead to collapse of an otherwise sub-critical wheel.
 
@@ -81,7 +80,7 @@ The rim is modeled as an initially circular beam with a constant cross-section.
 
 \subsection{Spoke equations}
 
-In this paper we consider bicycle wheels with slender prestressed spokes. We model a single spoke as an elastic bar pinned at each end. This ensures that the spoke force is always collinear with thes spoke axis. We fix our global coordinate system to the hub, which is assumed to be rigid. Therefore, the displacement of the hub node of a spoke is zero. The linearized elongation of a spoke is given by
+In this paper we consider bicycle wheels with slender prestressed spokes. We model a single spoke as an elastic bar pinned at each end. This ensures that the spoke force is always collinear with the spoke axis. We fix our global coordinate system to the hub, which is assumed to be rigid. Therefore, the displacement of the hub node of a spoke is zero. The linearized elongation of a spoke is given by
 \begin{equation}\label{eq:selong}
 \Delta l = \bm{u}_n\cdot \hat{\bm{n}}_1
 \end{equation}
@@ -96,79 +95,31 @@ where $\hat{\bm{n}}_2$ and $\hat{\bm{n}}_3$ are two orthogonal unit vectors orth
 
 The elongation produces a net force on the rim parallel to the original spoke axis equal to
 \begin{equation}\label{eq:sF1}
-f_1 = \left(\frac{E_sA_s\Delta l}{l}\hat{\bm{n}}_1\right) = \frac{E_sA_s}{l} \hat{\bm{n}}_1 \hat{\bm{n}}_1 \cdot \bm{u}_n 
+f_1 = \left(\frac{E_sA_s\Delta l}{l}\hat{\bm{n}}_1\right) = \frac{E_sA_s}{l} \hat{\bm{n}}_1 \cdot \bm{u}_n 
 \end{equation}
-The rotation of the spoke produces a net force on the rim perpendicular to the original spoke axis due to the rotation of the initial tension in the spoke.
+The rotation of the spoke produces net forces on the rim perpendicular to the original spoke axis due to the rotation of the initial tension vector.
 \begin{equation}\label{eq:sF2}
-f_2 = T \sin{\chi_1} \approx \frac{T}{l} \hat{\bm{n}}_2\hat{\bm{n}}_2 \cdot \bm{u}_n
+f_2 = T \sin{\Omega_1} \approx \frac{T}{l} \hat{\bm{n}}_2 \cdot \bm{u}_n
 \end{equation}
 \begin{equation}\label{eq:sF3}
-f_3 = T \sin{\chi_2} \approx \frac{T}{l} \hat{\bm{n}}_3\hat{\bm{n}}_3 \cdot \bm{u}_n
+f_3 = T \sin{\Omega_2} \approx \frac{T}{l} \hat{\bm{n}}_3 \cdot \bm{u}_n
 \end{equation}
-since $\hat{\bm{n}}_1,\hat{\bm{n}}_2\hat{\bm{n}}_3$ are mutually orthogonal, the total force on the rim is given by $\bm{f} = \bm{k}_f \cdot \bm{u}_n$, where the spoke stiffness matrix is given by
+since $\hat{\bm{n}}_1,\hat{\bm{n}}_2,\hat{\bm{n}}_3$ are mutually orthogonal, the total force on the rim is given by $\bm{f} = \bm{k}_f \cdot \bm{u}_n$, where the spoke stiffness matrix is given by
 \begin{equation}\label{eq:kf}
 \bm{k}_f = \frac{E_sA_s}{l}\hat{\bm{n}}_1\hat{\bm{n}}_1 + \frac{T}{l}(\hat{\bm{n}}_2\hat{\bm{n}}_2 + \hat{\bm{n}}_3\hat{\bm{n}}_3)
 \end{equation}
-The first term in Eqn. \ref{eq:kf} is the {\bf elastic stiffness} and the second term is the {\bf tension stiffness}. The tension stiffness is the component responsible for the transverse vibrations of a guitar string, e.g.
+The first term in Eqn.~\ref{eq:kf} is the {\bf elastic stiffness} and the second term is the {\bf tension stiffness}. The tension stiffness is the component responsible for the transverse vibrations of a guitar string, e.g.
 
-\subsection{Figures and tables}
-
-\begin{table}[h!]
-\begin{center}
-\caption{Example of a table with a short caption.} \label{tab:tab1}
-\begin{tabular}{|c|ccc|}
-\hline
-    &  $x$  &  $y$  &  $z$ \\
-\hline
-$x'$  &  $\alpha_1$ & $\beta_1$ & $\gamma_1$ \\
-$y'$  &  $\alpha_2$ & $\beta_2$ & $\gamma_2$ \\
-$z'$  &  $\alpha_3$ & $\beta_3$ & $\gamma_3$ \\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
-All figures should be clearly readable and relevant to the presented text. Use 
-of at least 300\,dpi resolution for pictures and 600\,dpi for line art is 
-required, 1\,px wide lines in figures should be avoided as they may become 
-invisible in print. There is no limit on the amount of figures as long as they 
-do not dominate the text and the total length of the paper is within the 
-specified limits. Both figures and tables should be centred on the page.
-
-\begin{figure}[h!]
-\begin{center}
-  \includegraphics[width=55mm]{figure1}
-  \caption{An example of a figure caption. Use 10~pt Times New Roman.
-           For long captions, use a text width of 13~cm.
-           Use the same style for the tables.} \label{fig:fig1}
-\end{center}
-\end{figure}
-Figures, graphs and tables must be included in the same style as shown for 
-Figure~\ref{fig:fig1} and Table~\ref{tab:tab1}.
-
-
-\subsection{References}
-
-Bibliographical citations should be written in the order in which they are 
-cited, see the References section below, where Reference~\cite{Pac02} 
-exemplifies the case of a textbook, while Reference~\cite{Ber07} is an article 
-in conference proceedings and Reference~\cite{Sha71} is an article in a 
-journal. Use can be made of a pre-existing bibtex style which uses a similar 
-style.
-
-
-\section{SUBMISSION OF PAPER}
-
-The paper should be submitted by e-mail to \href{mailto:jbrendelson@bmd2016mke.org}{jbrendelson@bmd2016mke.org} with the email subject containing the phrase \textit{``BMD 2016 paper submission - submitting author last name''}. \uline{The deadline is September 1st, 2016}. The file of the paper must be in the Portable Document Format (PDF) and the file size should be within the limit of 10 MB. Exceptionally, other file formats can be accepted if the symposium organizers have been informed beforehand. 
-
-Please make sure that the final version of the paper complies with the standards set here. Please note slightly different formatting requirements of the abstract and the final paper.
+Following the approach of Smith~\cite{Smith1901a} and Pippard~\cite{Pippard1932d}, we will approximate the spoke system as a continuum which exerts a distributed load on the rim. The stiffness per unit length is defined by the sum of the spoke stiffnesses in one periodic grouping of spokes, divided by the arc length of the grouping.
+\begin{equation}\label{eq:kbar}
+\bar{\bm{k}} = \frac{1}{2\pi R}\left(\frac{n_s}{n_p}\right) \sum_i^{n_p} \bm{k}_{f, i}
+\end{equation}
 
 \section{CONCLUSIONS}
 
-We very much look forward to welcoming you in Milwaukee! Best wishes and the 
-warmest regards from the Organizing Committee of Bicycle and Motorcycle 
-Dynamics 2016.
+...
 
-\bibliographystyle{acm}
+\bibliographystyle{naturemag}
 \bibliography{C:/Users/matt/OneDrive/Documents/Research/bibtex/Papers-BMD2016.bib}
 
 \end{document}
