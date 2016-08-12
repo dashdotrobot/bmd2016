@@ -1,5 +1,13 @@
 # Fdb version 3
-["pdflatex"] 1471021510 "paper.tex" "paper.pdf" "paper" 1471023316
+["bibtex paper"] 1471024692 "paper.aux" "paper.bbl" "paper" 1471024693
+  "bmd2016.bib" 0 -1 0 ""
+  "c:/texlive/2016/texmf-dist/bibtex/bst/base/acm.bst" 1471012831 21064 c61a48664f3c347ce7f73c1a6a530506 ""
+  "paper.aux" 1471024693 2305 7ce8ec4fa7a271f9fe9db60e9da4a817 ""
+  "paper.bcf" 0 -1 0 ""
+  (generated)
+  "paper.blg"
+  "paper.bbl"
+["pdflatex"] 1471024692 "paper.tex" "paper.pdf" "paper" 1471024693
   "bmd2016p.cls" 1471011362 6896 b028daa239c9ed8e61203c947824bb32 ""
   "c:/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc" 1471013201 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1471013376 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -114,11 +122,12 @@
   "c:/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1471015016 3870027 d24ff0d60827fdf00a9c860a31414a1f ""
   "c:/texlive/2016/texmf.cnf" 1471014957 673 4ae7b2f49cee444c5343a45b5d0f169c ""
   "figure1.pdf" 1471011364 19699 f0a6c0fd5f31bc3f5e8c01ad4cb4f014 ""
-  "paper.aux" 1471021511 2447 618737771d5fa31f00b47e5ca6873a04 ""
-  "paper.out" 1471021511 386 4bc78d83d40adb90c8dc5cc00e606711 ""
-  "paper.tex" 1471021509 10809 c34b7d87a0d0e6db7feb0dbeffc8353c ""
+  "paper.aux" 1471024693 2305 7ce8ec4fa7a271f9fe9db60e9da4a817 ""
+  "paper.bbl" 1471024675 49 0eba253fc001332e731e8aba3f23127b "bibtex paper"
+  "paper.out" 1471024693 386 4bc78d83d40adb90c8dc5cc00e606711 ""
+  "paper.tex" 1471024690 9070 25cd2446d5745fe468d8cdc053923123 ""
   (generated)
   "paper.log"
+  "paper.out"
   "paper.pdf"
   "paper.aux"
-  "paper.out"
