@@ -33,21 +33,7 @@ e-mail: o-balogun@northwestern.edu\\
 
 \section*{ABSTRACT}
 
-The first page begins with the title of the paper, the authors, affiliations, 
-abstract and keywords as it is shown in this document. The title of the paper 
-should be typed in 14\,pt bold font and be centred. It should be separated 
-from the symposium name by a 12\,pt space and from authors' names by an 18\,pt 
-space. Authors' names should be typed in bold font. Affiliations should be 
-typed in a general formatting style, centred within a corresponding bounding 
-box. The abstract part of the final paper should not be longer than about 
-300~words, so it fits on the title page. The abstract begins with the 
-``ABSTRACT'' header typed in bold 11\,pt font. The abstract text should be 
-separated from the header by an 11\,pt space. The abstract should be followed 
-by a list of keywords after the header ``Keywords:'' typed in bold 11\,pt 
-font. The keywords should be separated by commas. A dot should be place after 
-the last keyword. Up to about five keywords are allowed. Title, affiliations, 
-abstract and keywords have to fit on the title page. The Introduction 
-paragraph may start already on the title page provided there is enough space.
+...
 
 \begin{keywords}
 bicycle wheel, 
@@ -76,7 +62,26 @@ Here we derive a general theory for buckling of a spoked bicycle wheel under sel
 \section{DEFORMATION OF THE WHEEL}
 \subsection{Rim equations}
 
-The rim is modeled as an initially circular beam with a constant cross-section.
+The rim is modeled as an initially circular beam with a constant cross-section. For simplicity we will assume that the shear center and centroid of the cross-section coincide. Except for warping deformation, plane cross-sections remain planar and shear flexibility of the cross-section is neglected. Furthermore, we assume that the rim radius is much larger than the height of the rim profile.
+
+The in-plane curvature of the rim is $\kappa_2 = 1/R$ and remains constant during flexural-torsional buckling. The out-of-plane curvature and axial twist rate are
+\begin{equation}\label{eq:k2}
+\kappa_2 = u'' - \frac{\phi}{R}
+\end{equation}
+\begin{equation}\label{eq:k3}
+\kappa_3 = \phi' + \frac{1}{R} u'
+\end{equation}
+The symbol $()'$ indicates a derivative with respect to $s$. It can easily be verified that Equations \ref{eq:k2} and \ref{eq:k3} simplify to the standard equations for straight beams in the limit $R\rightarrow \infty$. The curvature and twist rate produce a bending moment and twisting moment equal to
+\begin{equation}\label{eq:M2}
+M_2 = EI_{11} \kappa_2
+\end{equation}
+\begin{equation}\label{eq:M3}
+M_3 = GJ \kappa_3 + EI_w \kappa_3''
+\end{equation}
+The strain energy is decomposed into lateral bending, uniform torsion, and warping terms which are related to the curvatures.
+\begin{equation}\label{eq:Urim}
+U_{rim} = \frac{1}{2} EI_{22} \kappa_2^2 + \frac{1}{2} GJ \kappa_3^2 + \frac{1}{2} EI_w (\kappa_3')^2
+\end{equation}
 
 \subsection{Spoke equations}
 
