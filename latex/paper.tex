@@ -41,6 +41,10 @@ buckling,
 bifurcation.
 \end{keywords}
 
+
+
+
+
 \section{INTRODUCTION}
 
 The bicycle wheel is a prestressed structure and is susceptible to buckling under internal forces. As the spokes are tightened uniformly, the rim deforms radially to accommodate the spoke strain. At a critical tension, the system reaches a bifurcation point and the rim buckles out of its initial plane. The post-buckling configuration is generally stable and the original shape of the wheel can be recovered by reducing the tension. Buckling can also be triggered by external forces in an otherwise stable wheel leading to a release of strain energy. This is an unstable process which generally leads to catastrophic failure.
@@ -59,12 +63,19 @@ The problem of the prestressed bicycle wheel is unique for a number of reasons. 
 
 Here we derive a general theory for buckling of a spoked bicycle wheel under self-tension and investigate several special cases. Furthermore, we analyze large deformation post-buckling behavior and show how local buckling of individual spokes can lead to collapse of an otherwise sub-critical wheel.
 
+
+
+
+
 \section{DEFORMATION OF THE WHEEL}
 \subsection{Rim equations}
 
 The rim is modeled as an initially circular beam with a constant cross-section. For simplicity we will assume that the shear center and centroid of the cross-section coincide. Except for warping deformation, plane cross-sections remain planar and shear flexibility of the cross-section is neglected. Furthermore, we assume that the rim radius is much larger than the height of the rim profile.
 
-The in-plane curvature of the rim is $\kappa_2 = 1/R$ and remains constant during flexural-torsional buckling. The out-of-plane curvature and axial twist rate are
+The in-plane curvature $\kappa_1$ is assumed to remain constant during flexural-torsional buckling. The in-plane curvature, out-of-plane curvature and twist rate are
+\begin{equation}\label{eq:k1}
+\kappa_1 = 1/R
+\end{equation}
 \begin{equation}\label{eq:k2}
 \kappa_2 = u'' - \frac{\phi}{R}
 \end{equation}
@@ -78,10 +89,19 @@ M_2 = EI_{11} \kappa_2
 \begin{equation}\label{eq:M3}
 M_3 = GJ \kappa_3 + EI_w \kappa_3''
 \end{equation}
-The strain energy is decomposed into lateral bending, uniform torsion, and warping terms which are related to the curvatures.
+The total strain energy is decomposed into lateral bending, uniform torsion, and warping terms which are related to the curvatures.
 \begin{equation}\label{eq:Urim}
-U_{rim} = \frac{1}{2} EI_{22} \kappa_2^2 + \frac{1}{2} GJ \kappa_3^2 + \frac{1}{2} EI_w (\kappa_3')^2
+U_{rim} = \int_0^{2\pi} \left( \frac{1}{2} EI_{22} \kappa_2^2 + \frac{1}{2} GJ \kappa_3^2 + \frac{1}{2} EI_w (\kappa_3')^2 \right)\, ds
 \end{equation}
+After buckling, a differential line segment $ds$ deforms to $dS$. The apparent shortening of the line segment along the $s$ direction is then
+\begin{equation}\label{eq:ds}
+ds - dS = ds - \sqrt{ds^2 + \left(\frac{du}{ds}ds\right)^2} \approx \frac{1}{2} (u')^2 \, ds
+\end{equation}
+The axial compressive force in the rim moves through this differential displacement, performing virtual work equal to
+\begin{equation}\label{eq:Vrimr}
+V_{rim} = \frac{1}{2} \int_0^{2\pi} N_r (u)^2 \, ds
+\end{equation}
+
 
 \subsection{Spoke equations}
 
@@ -120,6 +140,23 @@ Following the approach of Smith~\cite{Smith1901a} and Pippard~\cite{Pippard1932d
 \bar{\bm{k}} = \frac{1}{2\pi R}\left(\frac{n_s}{n_p}\right) \sum_i^{n_p} \bm{k}_{f, i}
 \end{equation}
 
+
+\subsection{Total potential energy and buckling criterion}
+The buckled shape of the wheel must be periodic, so we assume a buckled shape of the form
+\begin{equation}\label{eq:modeshape}
+\begin{split}
+u(s) &= \delta u_n \cos{\frac{ns}{R}} \\
+\phi(s) &= \delta\phi_n \cos{\frac{ns}{R}}
+\end{split}
+\end{equation}
+The wheel becomes unstable when the increase in strain energy is exactly balanced by the virtual work for a perturbing displacement $\delta u_n, \delta\phi_n$, i.e. when
+\begin{equation}\label{eq:TotPot}
+U_{rim} - V_{rim} = 0
+\end{equation}
+Substituting the buckling mode shape Eqn. \ref{eq:modeshape} into Eqns. \ref{eq:Urim} and \ref{eq:Vrimr} and substituting into Eqn. \ref{eq:TotPot} yields the critical buckling criterion for the $n$th mode.
+\begin{equation}\label{eq:Tcrit}
+...
+\end{equation}
 \section{CONCLUSIONS}
 
 ...
