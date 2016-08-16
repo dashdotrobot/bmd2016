@@ -66,8 +66,14 @@ Here we derive a general theory for buckling of a spoked bicycle wheel under sel
 
 
 
-
 \section{DEFORMATION OF THE WHEEL}
+...Tensegrity
+\begin{equation}\label{eq:TN}
+N_r = \frac{n_sT}{2\pi}
+\end{equation}
+
+
+
 \subsection{Rim equations}
 
 The rim is modeled as an initially circular beam with a constant cross-section. For simplicity we will assume that the shear center and centroid of the cross-section coincide. Except for warping deformation, plane cross-sections remain planar and shear flexibility of the cross-section is neglected. Furthermore, we assume that the rim radius is much larger than the height of the rim profile.
@@ -98,8 +104,8 @@ After buckling, a differential line segment $ds$ deforms to $dS$. The apparent s
 ds - dS = ds - \sqrt{ds^2 + \left(\frac{du}{ds}ds\right)^2} \approx \frac{1}{2} (u')^2 \, ds
 \end{equation}
 The axial compressive force in the rim moves through this differential displacement, performing virtual work equal to
-\begin{equation}\label{eq:Vrimr}
-V_{rim} = \frac{1}{2} \int_0^{2\pi} N_r (u)^2 \, ds
+\begin{equation}\label{eq:Vrim}
+V_{rim} = \frac{1}{2} \int_0^{2\pi} N_r (u')^2 \, ds
 \end{equation}
 
 
@@ -139,24 +145,55 @@ Following the approach of Smith~\cite{Smith1901a} and Pippard~\cite{Pippard1932d
 \begin{equation}\label{eq:kbar}
 \bar{\bm{k}} = \frac{1}{2\pi R}\left(\frac{n_s}{n_p}\right) \sum_i^{n_p} \bm{k}_{f, i}
 \end{equation}
+The distributed load $\bar{\bm{f}}$ does an amount of work per unit length equal to
+\begin{equation}\label{eq:w_spokes}
+\bar{w} = \int_0^{u_n} \bar{\bm{f}} \cdot d\bm{u}_n = \frac{1}{2} \bm{u}_n \cdot \bar{\bm{k}} \cdot \bm{u}_n
+\end{equation}
+The line of action is assumed to pass sufficiently close to the rim shear center that any difference between the displacement of the spoke nipple and the displacement of the shear center can be ignored. The total strain energy stored in the spoke system is equal to
+\begin{equation}\label{eq:Us}
+U_{spokes} = \int_0^{2\pi} \bar{w} \, ds = \frac{1}{2}\left( \bar{k}_{uu}u^2 + \bar{k}_{vv}v^2 + \bar{k}_{ww}w^2 + 2\bar{k}_{uv}uv + 2\bar{k}_{uw}uw + 2\bar{k}_{vw}vw\right)
+\end{equation}
 
 
 \subsection{Total potential energy and buckling criterion}
+
 The buckled shape of the wheel must be periodic, so we assume a buckled shape of the form
 \begin{equation}\label{eq:modeshape}
 \begin{split}
-u(s) &= \delta u_n \cos{\frac{ns}{R}} \\
-\phi(s) &= \delta\phi_n \cos{\frac{ns}{R}}
+u &= \delta u_n \cos{\frac{ns}{R}} \\
+\phi &= \delta\phi_n \cos{\frac{ns}{R}}
 \end{split}
 \end{equation}
-The wheel becomes unstable when the increase in strain energy is exactly balanced by the virtual work for a perturbing displacement $\delta u_n, \delta\phi_n$, i.e. when
+The wheel becomes unstable when the increase in strain energy is exactly balanced by the virtual work for a perturbing displacement $\delta u_n, \delta\phi_n$, i.e. when the total potential energy is zero.
 \begin{equation}\label{eq:TotPot}
-U_{rim} - V_{rim} = 0
+\Pi = U_{rim} + U_{spokes} - V_{rim} = 0
 \end{equation}
-Substituting the buckling mode shape Eqn. \ref{eq:modeshape} into Eqns. \ref{eq:Urim} and \ref{eq:Vrimr} and substituting into Eqn. \ref{eq:TotPot} yields the critical buckling criterion for the $n$th mode.
-\begin{equation}\label{eq:Tcrit}
+Substituting the buckling mode shape Eqn. \ref{eq:modeshape} into Eqns. \ref{eq:Urim}, \ref{eq:Vrim}, and \ref{eq:Us} and substituting into Eqn. \ref{eq:TotPot} yields a buckling criterion for the $n$th mode.
+\begin{multline}\label{eq:BuckCrit}
+\frac{\pi EI_{11}}{R^3}(n^2 u_n - R\phi_n)^2 + \frac{\pi n^2}{R^2}\left(GJ + \frac{EI_w}{R^2}n^2\right)(u_n-R\phi_n)^2 + \\
+\pi R(\bar{k}_{uu}^{el} + T\bar{k}_{uu}^{el})u_n^2 - N_r\frac{\pi n^2}{R}u_n^2=0
+\end{multline}
+Equation \ref{eq:BuckCrit} has a quadratic form and can be written using matrix notation:
+\begin{equation}\label{eq:Qform}
+\begin{bmatrix}
+u_n\\\phi_n
+\end{bmatrix} \cdot
+\begin{bmatrix}
+\frac{\partial^2 \Pi}{\partial u_n^2} & \frac{\partial^2 \Pi}{\partial u_n \partial \phi_n}\\
+\frac{\partial^2 \Pi}{\partial u_n\partial\phi_n} & \frac{\partial^2 \Pi}{\partial \phi_n^2}
+\end{bmatrix} \cdot
+\begin{bmatrix}
+u_n\\\phi_n
+\end{bmatrix}
+=0
+\end{equation}
+Non-trivial solutions of Eqn. \ref{eq:Qform} exist when the determinant of the matrix vanishes. Substituting Eqn. \ref{eq:TN} for $N_r$ and solving Eqn. \ref{eq:BuckCrit} for $T$ gives the critical spoke tension for the $n$th mode.
+\begin{equation}
 ...
 \end{equation}
+
+
+
 \section{CONCLUSIONS}
 
 ...
