@@ -1,4 +1,5 @@
 \documentclass{bmd2016p}
+\usepackage{epstopdf}
 
 \begin{document}
 
@@ -206,6 +207,15 @@ The solution to Eqn. \ref{eq:Tc_eq} can be written in non-dimensional form as
 	\frac{T_{c,n}}{T_e} = \left( \frac{\tilde{u}n^2(n^2-1)^2}{1+\tilde{\mu}n^2} + \lambda \right) \left(\frac{1}{n^2-1} \right)
 	\end{equation}
 where the ``Euler tension'' $T_e=2\pi EI_{22}/n_sR^2$ is the tension that would produce a compressive force in the rim equal to the classical buckling load for a straight beam-column of length $2\pi R$. The parameter $\tilde{\mu} = \widetilde{GJ}/EI_{22}$ is the ratio of the effective torsional stiffness to the lateral bending stiffness. The parameter $\lambda = \bar{k}_{uu}^{el}R^4/EI_{22}$ is the ratio of the spoke system stiffness $\bar{k}_{uu}^{el}R$ to the rim bending stiffness $EI_{22}/R^3$.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=1.0]{figures/bmd_figures-06.eps}
+\caption{\textbf{(a)} Buckling mode parameter map. Only the first 4 modes are shown. \textbf{(b)}--\textbf{(c)} Normalized buckling tension vs. $\tilde{\mu}$ and $\lambda$. Solid black line = Eqn. \ref{eq:Tc_nondim}, dashed red line = power law, blue stars = finite-element simulations. In (a) $\lambda=10$ while in (b) $\tilde{\mu} = 0.38$.}
+\label{fig:Tc_nondim}
+\end{figure}
+
+
 
 
 \section{SUB-CRITICAL BUCKLING UNDER LATERAL LOADS}
