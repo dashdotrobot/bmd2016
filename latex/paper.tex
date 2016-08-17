@@ -68,9 +68,9 @@ Here we derive a general theory for buckling of a spoked bicycle wheel under sel
 
 \section{DEFORMATION OF THE WHEEL}
 ...Tensegrity
-\begin{equation}\label{eq:TN}
-N_r = \frac{n_sT}{2\pi}
-\end{equation}
+	\begin{equation}\label{eq:TN}
+	N_r = \frac{n_sT}{2\pi}
+	\end{equation}
 
 
 
@@ -79,118 +79,118 @@ N_r = \frac{n_sT}{2\pi}
 The rim is modeled as an initially circular beam with a constant cross-section. For simplicity we will assume that the shear center and centroid of the cross-section coincide. Except for warping deformation, plane cross-sections remain planar and shear flexibility of the cross-section is neglected. Furthermore, we assume that the rim radius is much larger than the height of the rim profile.
 
 The in-plane curvature $\kappa_1$ is assumed to remain constant during flexural-torsional buckling. The in-plane curvature, out-of-plane curvature and twist rate are
-\begin{equation}\label{eq:k1}
-\kappa_1 = 1/R
-\end{equation}
-\begin{equation}\label{eq:k2}
-\kappa_2 = u'' - \frac{\phi}{R}
-\end{equation}
-\begin{equation}\label{eq:k3}
-\kappa_3 = \phi' + \frac{1}{R} u'
-\end{equation}
+	\begin{equation}\label{eq:k1}
+	\kappa_1 = 1/R
+	\end{equation}
+	\begin{equation}\label{eq:k2}
+	\kappa_2 = u'' - \frac{\phi}{R}
+	\end{equation}
+	\begin{equation}\label{eq:k3}
+	\kappa_3 = \phi' + \frac{1}{R} u'
+	\end{equation}
 The symbol $()'$ indicates a derivative with respect to $s$. It can easily be verified that Equations \ref{eq:k2} and \ref{eq:k3} simplify to the standard equations for straight beams in the limit $R\rightarrow \infty$. The curvature and twist rate produce a bending moment and twisting moment equal to
-\begin{equation}\label{eq:M2}
-M_2 = EI_{11} \kappa_2
-\end{equation}
-\begin{equation}\label{eq:M3}
-M_3 = GJ \kappa_3 + EI_w \kappa_3''
-\end{equation}
+	\begin{equation}\label{eq:M2}
+	M_2 = EI_{11} \kappa_2
+	\end{equation}
+	\begin{equation}\label{eq:M3}
+	M_3 = GJ \kappa_3 + EI_w \kappa_3''
+	\end{equation}
 The total strain energy is decomposed into lateral bending, uniform torsion, and warping terms which are related to the curvatures.
-\begin{equation}\label{eq:Urim}
-U_{rim} = \int_0^{2\pi} \left( \frac{1}{2} EI_{22} \kappa_2^2 + \frac{1}{2} GJ \kappa_3^2 + \frac{1}{2} EI_w (\kappa_3')^2 \right)\, ds
-\end{equation}
+	\begin{equation}\label{eq:Urim}
+	U_{rim} = \int_0^{2\pi} \left( \frac{1}{2} EI_{22} \kappa_2^2 + \frac{1}{2} GJ \kappa_3^2 + \frac{1}{2} EI_w (\kappa_3')^2 \right)\, ds
+	\end{equation}
 After buckling, a differential line segment $ds$ deforms to $dS$. The apparent shortening of the line segment along the $s$ direction is then
-\begin{equation}\label{eq:ds}
-ds - dS = ds - \sqrt{ds^2 + \left(\frac{du}{ds}ds\right)^2} \approx \frac{1}{2} (u')^2 \, ds
-\end{equation}
+	\begin{equation}\label{eq:ds}
+	ds - dS = ds - \sqrt{ds^2 + \left(\frac{du}{ds}ds\right)^2} \approx \frac{1}{2} (u')^2 \, ds
+	\end{equation}
 The axial compressive force in the rim moves through this differential displacement, performing virtual work equal to
-\begin{equation}\label{eq:Vrim}
-V_{rim} = \frac{1}{2} \int_0^{2\pi} N_r (u')^2 \, ds
-\end{equation}
+	\begin{equation}\label{eq:Vrim}
+	V_{rim} = \frac{1}{2} \int_0^{2\pi} N_r (u')^2 \, ds
+	\end{equation}
 
 
 \subsection{Spoke equations}
 
 In this paper we consider bicycle wheels with slender prestressed spokes. We model a single spoke as an elastic bar pinned at each end. This ensures that the spoke force is always collinear with the spoke axis. We fix our global coordinate system to the hub, which is assumed to be rigid. Therefore, the displacement of the hub node of a spoke is zero. The linearized elongation of a spoke is given by
-\begin{equation}\label{eq:selong}
-\Delta l = \bm{u}_n\cdot \hat{\bm{n}}_1
-\end{equation}
+	\begin{equation}\label{eq:selong}
+	\Delta l = \bm{u}_n\cdot \hat{\bm{n}}_1
+	\end{equation}
 where $\bm{u}_n$ is the displacement vector of the spoke nipple and $\hat{\bm{n}}_1$ is a unit vector pointing from the spoke nipple to the hub eyelet. The linearized rotation of the spoke is given by
-\begin{equation}\label{eq:srot1}
-\Omega_1 = \frac{1}{l} \bm{u}_n\cdot \hat{\bm{n}}_2
-\end{equation}
-\begin{equation}\label{eq:srot2}
-\Omega_2 = \frac{1}{l} \bm{u}_n\cdot \hat{\bm{n}}_3
-\end{equation}
+	\begin{equation}\label{eq:srot1}
+	\Omega_1 = \frac{1}{l} \bm{u}_n\cdot \hat{\bm{n}}_2
+	\end{equation}
+	\begin{equation}\label{eq:srot2}
+	\Omega_2 = \frac{1}{l} \bm{u}_n\cdot \hat{\bm{n}}_3
+	\end{equation}
 where $\hat{\bm{n}}_2$ and $\hat{\bm{n}}_3$ are two orthogonal unit vectors orthogonal to $\hat{\bm{n}}_1$, and $l$ is the spoke length.
 
 The elongation produces a net force on the rim parallel to the original spoke axis equal to
-\begin{equation}\label{eq:sF1}
-f_1 = \left(\frac{E_sA_s\Delta l}{l}\hat{\bm{n}}_1\right) = \frac{E_sA_s}{l} \hat{\bm{n}}_1 \cdot \bm{u}_n 
-\end{equation}
+	\begin{equation}\label{eq:sF1}
+	f_1 = E_sA_s\left(\frac{\Delta l}{l}\right)\hat{\bm{n}}_1 = \frac{E_sA_s}{l} \hat{\bm{n}}_1 \cdot \bm{u}_n 
+	\end{equation}
 The rotation of the spoke produces net forces on the rim perpendicular to the original spoke axis due to the rotation of the initial tension vector.
-\begin{equation}\label{eq:sF2}
-f_2 = T \sin{\Omega_1} \approx \frac{T}{l} \hat{\bm{n}}_2 \cdot \bm{u}_n
-\end{equation}
-\begin{equation}\label{eq:sF3}
-f_3 = T \sin{\Omega_2} \approx \frac{T}{l} \hat{\bm{n}}_3 \cdot \bm{u}_n
-\end{equation}
+	\begin{equation}\label{eq:sF2}
+	f_2 = T \sin{\Omega_1} \approx \frac{T}{l} \hat{\bm{n}}_2 \cdot \bm{u}_n
+	\end{equation}
+	\begin{equation}\label{eq:sF3}
+	f_3 = T \sin{\Omega_2} \approx \frac{T}{l} \hat{\bm{n}}_3 \cdot \bm{u}_n
+	\end{equation}
 since $\hat{\bm{n}}_1,\hat{\bm{n}}_2,\hat{\bm{n}}_3$ are mutually orthogonal, the total force on the rim is given by $\bm{f} = \bm{k}_f \cdot \bm{u}_n$, where the spoke stiffness matrix is given by
-\begin{equation}\label{eq:kf}
-\bm{k}_f = \frac{E_sA_s}{l}\hat{\bm{n}}_1\hat{\bm{n}}_1 + \frac{T}{l}(\hat{\bm{n}}_2\hat{\bm{n}}_2 + \hat{\bm{n}}_3\hat{\bm{n}}_3)
-\end{equation}
+	\begin{equation}\label{eq:kf}
+	\bm{k}_f = \frac{E_sA_s}{l}\hat{\bm{n}}_1\hat{\bm{n}}_1 + \frac{T}{l}(\hat{\bm{n}}_2\hat{\bm{n}}_2 + \hat{\bm{n}}_3\hat{\bm{n}}_3)
+	\end{equation}
 The first term in Eqn.~\ref{eq:kf} is the {\bf elastic stiffness} and the second term is the {\bf tension stiffness}. The tension stiffness is the component responsible for the transverse vibrations of a guitar string, e.g.
 
 Following the approach of Smith~\cite{Smith1901a} and Pippard~\cite{Pippard1932d}, we will approximate the spoke system as a continuum which exerts a distributed load on the rim. The stiffness per unit length is defined by the sum of the spoke stiffnesses in one periodic grouping of spokes, divided by the arc length of the grouping.
-\begin{equation}\label{eq:kbar}
-\bar{\bm{k}} = \frac{1}{2\pi R}\left(\frac{n_s}{n_p}\right) \sum_i^{n_p} \bm{k}_{f, i}
-\end{equation}
-The distributed load $\bar{\bm{f}}$ does an amount of work per unit length equal to
-\begin{equation}\label{eq:w_spokes}
-\bar{w} = \int_0^{u_n} \bar{\bm{f}} \cdot d\bm{u}_n = \frac{1}{2} \bm{u}_n \cdot \bar{\bm{k}} \cdot \bm{u}_n
-\end{equation}
-The line of action is assumed to pass sufficiently close to the rim shear center that any difference between the displacement of the spoke nipple and the displacement of the shear center can be ignored. The total strain energy stored in the spoke system is equal to
-\begin{equation}\label{eq:Us}
-U_{spokes} = \int_0^{2\pi} \bar{w} \, ds = \frac{1}{2}\left( \bar{k}_{uu}u^2 + \bar{k}_{vv}v^2 + \bar{k}_{ww}w^2 + 2\bar{k}_{uv}uv + 2\bar{k}_{uw}uw + 2\bar{k}_{vw}vw\right)
-\end{equation}
+	\begin{equation}\label{eq:kbar}
+	\bar{\bm{k}} = \frac{1}{2\pi R}\left(\frac{n_s}{n_p}\right) \sum_i^{n_p} \bm{k}_{f, i}
+	\end{equation}
+	The distributed load $\bar{\bm{f}}$ does an amount of work per unit length equal to
+	\begin{equation}\label{eq:w_spokes}
+	\bar{w} = \int_0^{u_n} \bar{\bm{f}} \cdot d\bm{u}_n = \frac{1}{2} \bm{u}_n \cdot \bar{\bm{k}} \cdot \bm{u}_n
+	\end{equation}
+The line of action is assumed to pass sufficiently close to the rim shear center that any difference between the displacement of the spoke nipple and the displacement of the shear center can be ignored. Therefore $\bm{u}_n = \bm{u}$. Substituting a lateral buckling displacement $\bm{u}=u\hat{\bm{e}}_1$ into Eqn. \ref{eq:w_spokes} and integrating over the length of the rim gives the strain energy stored in the spoke system.
+	\begin{equation}\label{eq:Us}
+	U_{spokes} = \int_0^{2\pi} \bar{w} \, ds = \frac{1}{2} \bar{k}_{uu}u^2
+	\end{equation}
 
 
 \subsection{Total potential energy and buckling criterion}
 
 The buckled shape of the wheel must be periodic, so we assume a buckled shape of the form
-\begin{equation}\label{eq:modeshape}
-\begin{split}
-u &= \delta u_n \cos{\frac{ns}{R}} \\
-\phi &= \delta\phi_n \cos{\frac{ns}{R}}
-\end{split}
-\end{equation}
+	\begin{equation}\label{eq:modeshape}
+	\begin{split}
+	u &= \delta u_n \cos{\frac{ns}{R}} \\
+	\phi &= \delta\phi_n \cos{\frac{ns}{R}}
+	\end{split}
+	\end{equation}
 The wheel becomes unstable when the increase in strain energy is exactly balanced by the virtual work for a perturbing displacement $\delta u_n, \delta\phi_n$, i.e. when the total potential energy is zero.
-\begin{equation}\label{eq:TotPot}
-\Pi = U_{rim} + U_{spokes} - V_{rim} = 0
-\end{equation}
+	\begin{equation}\label{eq:TotPot}
+	\Pi = U_{rim} + U_{spokes} - V_{rim} = 0
+	\end{equation}
 Substituting the buckling mode shape Eqn. \ref{eq:modeshape} into Eqns. \ref{eq:Urim}, \ref{eq:Vrim}, and \ref{eq:Us} and substituting into Eqn. \ref{eq:TotPot} yields a buckling criterion for the $n$th mode.
-\begin{multline}\label{eq:BuckCrit}
-\frac{\pi EI_{11}}{R^3}(n^2 u_n - R\phi_n)^2 + \frac{\pi n^2}{R^2}\left(GJ + \frac{EI_w}{R^2}n^2\right)(u_n-R\phi_n)^2 + \\
-\pi R(\bar{k}_{uu}^{el} + T\bar{k}_{uu}^{el})u_n^2 - N_r\frac{\pi n^2}{R}u_n^2=0
-\end{multline}
+	\begin{multline}\label{eq:BuckCrit}
+	\frac{\pi EI_{11}}{R^3}(n^2 u_n - R\phi_n)^2 + \frac{\pi n^2}{R^2}\left(GJ + \frac{EI_w}{R^2}n^2\right)(u_n-R\phi_n)^2 + \\
+	\pi R(\bar{k}_{uu}^{el} + T\bar{k}_{uu}^{el})u_n^2 - N_r\frac{\pi n^2}{R}u_n^2=0
+	\end{multline}
 Equation \ref{eq:BuckCrit} has a quadratic form and can be written using matrix notation:
-\begin{equation}\label{eq:Qform}
-\begin{bmatrix}
-u_n\\\phi_n
-\end{bmatrix} \cdot
-\begin{bmatrix}
-\frac{\partial^2 \Pi}{\partial u_n^2} & \frac{\partial^2 \Pi}{\partial u_n \partial \phi_n}\\
-\frac{\partial^2 \Pi}{\partial u_n\partial\phi_n} & \frac{\partial^2 \Pi}{\partial \phi_n^2}
-\end{bmatrix} \cdot
-\begin{bmatrix}
-u_n\\\phi_n
-\end{bmatrix}
-=0
-\end{equation}
+	\begin{equation}\label{eq:Qform}
+	\begin{bmatrix}
+	u_n\\\phi_n
+	\end{bmatrix} \cdot
+	\begin{bmatrix}
+	\frac{\partial^2 \Pi}{\partial u_n^2} & \frac{\partial^2 \Pi}{\partial u_n \partial \phi_n}\\
+	\frac{\partial^2 \Pi}{\partial u_n\partial\phi_n} & \frac{\partial^2 \Pi}{\partial \phi_n^2}
+	\end{bmatrix} \cdot
+	\begin{bmatrix}
+	u_n\\\phi_n
+	\end{bmatrix}
+	=0
+	\end{equation}
 Non-trivial solutions of Eqn. \ref{eq:Qform} exist when the determinant of the matrix vanishes. Substituting Eqn. \ref{eq:TN} for $N_r$ and solving Eqn. \ref{eq:BuckCrit} for $T$ gives the critical spoke tension for the $n$th mode.
-\begin{equation}
-...
-\end{equation}
+	\begin{equation}
+	...
+	\end{equation}
 
 
 
