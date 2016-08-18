@@ -72,7 +72,7 @@ A typical bicycle wheel (Fig. \ref{fig:schematic} consists of a slender rim conn
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=1.0]{figures/bmd_figures-06.eps}
+\includegraphics[scale=1.0]{figures/bmd_figures-05.eps}
 \caption{caption}
 \label{fig:schematic}
 \end{figure}
@@ -90,7 +90,7 @@ The rim is modeled as an initially circular beam with a constant cross-section. 
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[scale=1.0]{figures/bmd_figures-07.eps}
+\includegraphics[scale=1.0]{figures/bmd_figures-06.eps}
 \caption{Deformation of a rim cross-section. The shear center $S\rightarrow S'$ translates by the vector $\bm{u} = u\hat{\bm{e}}_1 + v\hat{\bm{e}}_2 + w\hat{\bm{e}}_3$ and rotates through an angle $\phi$.}
 \label{fig:def}
 \end{figure}
@@ -226,7 +226,7 @@ where the ``Euler tension'' $T_e=2\pi EI_{22}/n_sR^2$ is the tension that would 
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[scale=1.0]{figures/bmd_figures-05.eps}
+\includegraphics[scale=1.0]{figures/bmd_figures-04.eps}
 \caption{\textbf{(a)} Buckling mode parameter map. Only the first 4 modes are shown. \textbf{(b)}--\textbf{(c)} Normalized buckling tension vs. $\tilde{\mu}$ and $\lambda$. Solid black line = Eqn. \ref{eq:Tc_nondim}, dashed red line = power law, blue stars = finite-element simulations. In (a) $\lambda=10$ while in (b) $\tilde{\mu} = 0.38$.}
 \label{fig:Tc_nondim}
 \end{figure}
@@ -245,7 +245,7 @@ Minimizing Eqn. \ref{eq:Tcn_small_mu} with respect to $\bar{n}$ by setting the d
 	\end{equation}
 Substituting Eqn. \ref{eq:nbar_small_mu} into Eqn. \ref{eq:Tc_small_mu} yields, after simplification, a simple power law relationship.
 	\begin{equation}\label{eq:Tc_small_mu}
-	T_c \approx \frac{11.875}{n_sR^2} \, \left(\bar{k}_{uu}^{el}R^4 \right)^{2/3} \widetilde{GJ}^{1/3}
+	T_c \approx \frac{11.875}{n_sR^2} \, \left(\bar{k}_{uu}^{el}R^4 \right)^{2/3} (\widetilde{GJ})^{1/3}
 	\end{equation}
 Equation \ref{eq:Tc_small_mu} suggests that when the torsional stiffness is smaller than the bending stiffness, the buckling behavior is dominated by torsion and does not depend explicitly on the bending stiffness at all. Equation \ref{eq:Tc_small_mu} is shown in Fig. \ref{fig:Tc_nondim} next to Equation \ref{eq:Tc_nondim} and finite-element calculations. The power law is strictly less than Equation \ref{eq:Tc_nondim} which conveniently gives a conservative design criterion.
 
