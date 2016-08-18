@@ -41,12 +41,14 @@ e-mail: o-balogun@northwestern.edu\\
 \end{center}
 
 \section*{ABSTRACT}
+A bicycle wheel's spokes must be kept under tension to prevent them from buckling under load. However, above a certain critical tension, the rim will bend and twist out of its plane.
 
 
 \begin{keywords}
 bicycle wheel, 
 buckling, 
-bifurcation.
+bifurcation,
+rider safety.
 \end{keywords}
 
 
@@ -55,7 +57,7 @@ bifurcation.
 
 \section{INTRODUCTION}
 
-The bicycle wheel is a prestressed structure and is susceptible to buckling under internal forces. As the spokes are tightened uniformly, the rim deforms radially to accommodate the spoke strain. At a critical tension, the system reaches a bifurcation point and the rim buckles out of its initial plane. The post-buckling configuration is generally stable and the original shape of the wheel can be recovered by reducing the tension. Buckling can also be triggered by external forces in an otherwise stable wheel leading to a release of strain energy. This is an unstable process which generally leads to catastrophic failure.
+The bicycle wheel is a prestressed structure and is susceptible to buckling under internal forces. As the spokes are tightened uniformly, the rim deforms radially to accommodate the spoke strain. At a critical tension, the system reaches a bifurcation point and the rim buckles out of its initial plane. The post-buckling configuration is generally stable and the original shape of the wheel can be recovered by reducing the tension. Buckling can also be triggered by external forces in an otherwise stable wheel leading to a release of strain energy. This is an unstable process which generally leads to a permanently ``taco-ed'' wheel.
 
 Despite its implications for wheel strength, the buckling problem has never received a rigorous treatment to our knowledge. Jobst Brandt alludes to buckling in his practical manual for wheelbuilders~\cite{Brandt1993c}:
 
@@ -65,11 +67,11 @@ Despite its implications for wheel strength, the buckling problem has never rece
 
 He did not discuss the problem further, but suggested that wheel failure commonly occurs due to a loss of lateral stability caused by spoke buckling. Pippard and Francis~\cite{Pippard1932d} derived a model for lateral stiffness based on the elastic foundation model, but did not discuss stability and neglected any effects of spoke tension.
 
-Flexural-torsional buckling of rings can be treated as a special case of buckling of arches, where the included angle is allowed to go to $2\pi$. Timoshenko and Gere~\cite{Timoshenko1961a} gave a formula for the critical load for a ring with doubly-symmetric cross-section subjected to radial loads. The theory of flexural-torsional buckling of monosymmetric arches (bicycle rims have only one plane of symmetry) was broadly formalized by Trahair and Papangelis~\cite{Trahair1987b} using the virtual work approach to derive the equilibrium and stability equations. Their theory has been extended to treat arches restrained by continuous~\cite{Pi2002b} or discrete~\cite{Bradford2002d} elastic supports and elastic end restraints~\cite{Guo2014b}.
+The bicycle wheel can be modeled as an elastically supported arch in which the included angle is allowed to go to $2\pi$. Timoshenko and Gere~\cite{Timoshenko1961a} gave a formula for the critical load for a ring with doubly-symmetric cross-section subjected to radial loads. The theory of flexural-torsional buckling of monosymmetric arches (bicycle rims have only one plane of symmetry) was broadly formalized by Trahair and Papangelis~\cite{Trahair1987b} using the virtual work approach to derive the equilibrium and stability equations. Their theory has been extended to treat arches restrained by continuous~\cite{Pi2002b} or discrete~\cite{Bradford2002d} elastic supports and elastic end restraints~\cite{Guo2014b}.
 
 The problem of the prestressed bicycle wheel is unique for a number of reasons. First, the buckling load is internal to the structure. Second, the spokes act both as elastic restraints resisting buckling and as prestressing elements causing buckling. Third, the lateral, radial, and torsional restraining actions of the spokes are coupled---i.e. lateral deflection at a spoke may produce lateral, radial, and torsional reactions. These considerations extend to other structural systems. Large observation wheels such as the London Eye~\cite{Mann2001a} and the Singapore Flyer~\cite{Allsop2009a} resemble large bicycle wheels and achieve lateral stability due to the bracing angle of prestressed cables, and must be designed against flexural-torsional buckling.
 
-Here we derive a general theory for buckling of a spoked bicycle wheel under self-tension and investigate several special cases. Furthermore, we analyze large deformation post-buckling behavior and show how local buckling of individual spokes can lead to collapse of an otherwise sub-critical wheel.
+Here we derive a simple solution for buckling of a spoked bicycle wheel under self-tension and investigate several special cases.
 
 
 
@@ -80,7 +82,7 @@ A typical bicycle wheel (Fig. \ref{fig:schematic} consists of a slender rim conn
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=1.0]{figures/bmd_figures-05.eps}
-\caption{caption}
+\caption{\textbf{(a)}-\textbf{(b)} Schematic of a model bicycle wheel. In general, the spokes lie on a hyperboloid which forms an angle of $\alpha$ with the wheel plane. If the in-plane angle $\beta$ is zero, the spoke surface is precisely a cone. \textbf{(c)} A wheel buckled into a saddle shape.}
 \label{fig:schematic}
 \end{figure}
 
@@ -125,7 +127,7 @@ The total strain energy is decomposed into lateral bending, uniform torsion, and
 	\end{equation}
 After buckling, a differential line segment $ds$ deforms to $dS$. The apparent shortening of the line segment along the $s$ direction is then
 	\begin{equation}\label{eq:ds}
-	ds - dS = ds - \sqrt{ds^2 + \left(\frac{du}{ds}ds\right)^2} \approx \frac{1}{2} (u')^2 \, ds
+	ds - dS = ds - \sqrt{ds^2 - \left(\frac{du}{ds}ds\right)^2} \approx \frac{1}{2} (u')^2 \, ds
 	\end{equation}
 The axial compressive force in the rim moves through this differential displacement, performing virtual work equal to
 	\begin{equation}\label{eq:Vrim}
@@ -165,7 +167,7 @@ since \n{}, \nn{}, \nnn{} are mutually orthogonal, the total force on the rim is
 	\end{equation}
 The first term in Eqn.~\ref{eq:kf} is the {\bf elastic stiffness} and the second term is the {\bf tension stiffness}. The tension stiffness is the component responsible for the transverse vibrations of a guitar string, e.g.
 
-Following the approach of Smith~\cite{Smith1901a} and Pippard~\cite{Pippard1932d}, we will approximate the spoke system as a continuum which exerts a distributed load on the rim. The stiffness per unit length is defined by the sum of the spoke stiffnesses in one periodic grouping of spokes, divided by the arc length of the grouping.
+Following the approach of Smith~\cite{Smith1901a} and Pippard~\cite{Pippard1932d}, we will approximate the spoke system as a continuum which exerts a distributed load on the rim. The stiffness per unit length is defined by the sum of the spoke stiffnesses in one periodic grouping of $n_p$ spokes, divided by the arc length of the grouping.
 	\begin{equation}\label{eq:kbar}
 	\bar{\bm{k}} = \frac{1}{2\pi R}\left(\frac{n_s}{n_p}\right) \sum_i^{n_p} \bm{k}_{f, i}
 	\end{equation}
@@ -217,17 +219,17 @@ The torsional rigidity and warping rigidity can be combined into an effective to
 	\end{equation}
 Non-trivial solutions of Eqn. \ref{eq:Qform} exist when the determinant of the matrix vanishes. Expanding the determinant in Eqn. \ref{eq:Qform} and substituting Eqn. \ref{eq:TN} yields a linear equation for the critical buckling tension of the $n$th mode.
 	\begin{multline}\label{eq:Tc_eq}
-	\left(\frac{2\pi EI_{22}}{R}+\frac{2\pi \widetilde{GJ}n^2}{R} \right) \left( \frac{2\pi \widetilde{GJ}n^2}{R^3} + \frac{2\pi EI_{22}n^4}{R^3} + 2\pi R\bar{k}_{uu}^{el} + \frac{n_sT_{c,n}}{l} - \frac{n_sn^2T_{c,n}}{R}\right)\\
+	\left(\frac{2\pi EI_{22}}{R}+\frac{2\pi \widetilde{GJ}n^2}{R} \right) \left( \frac{2\pi \widetilde{GJ}n^2}{R^3} + \frac{2\pi EI_{22}n^4}{R^3} + 2\pi R\bar{k}_{uu}^{el} + \frac{n_sT_{cn}}{l} - \frac{n_sn^2T_{cn}}{R}\right)\\
 	- \left( \frac{2\pi EI_{22}n^2}{R^2} + \frac{2\pi \widetilde{GJ}n^2}{R^2} \right)^2 = 0
 	\end{multline}
-Solving Eqn. \ref{eq:Tc_eq} for $T_{c,n}$ yields the tension at which the $n$th mode becomes unstable. The critical buckling tension $T_c$ is the minimum $T_{c,n}$ with respect to the mode number $n\geq 2$.
+Solving Eqn. \ref{eq:Tc_eq} for $T_{cn}$ yields the tension at which the $n$th mode becomes unstable. The critical buckling tension $T_c$ is the minimum $T_{cn}$ with respect to the mode number $n\geq 2$.
 
 
 
 \section{BUCKLING DUE TO SPOKE TENSION}
 The solution to Eqn. \ref{eq:Tc_eq} can be written in non-dimensional form as
 	\begin{equation}\label{eq:Tc_nondim}
-	\frac{T_{c,n}}{T_e} = \left( \frac{\tilde{u}n^2(n^2-1)^2}{1+\tilde{\mu}n^2} + \lambda \right) \left(\frac{1}{n^2-1} \right)
+	\frac{T_{cn}}{T_e} = \left( \frac{\tilde{u}n^2(n^2-1)^2}{1+\tilde{\mu}n^2} + \lambda \right) \left(\frac{1}{n^2-1} \right)
 	\end{equation}
 where the ``Euler tension'' $T_e=2\pi EI_{22}/n_sR^2$ is the tension that would produce a compressive force in the rim equal to the classical buckling load for a straight beam-column of length $2\pi R$. The parameter $\tilde{\mu} = \widetilde{GJ}/EI_{22}$ is the ratio of the effective torsional stiffness to the lateral bending stiffness. The parameter $\lambda = \bar{k}_{uu}^{el}R^4/EI_{22}$ is the ratio of the spoke system stiffness $\bar{k}_{uu}^{el}R$ to the rim bending stiffness $EI_{22}/R^3$.
 
@@ -238,15 +240,15 @@ where the ``Euler tension'' $T_e=2\pi EI_{22}/n_sR^2$ is the tension that would 
 \label{fig:Tc_nondim}
 \end{figure}
 
-Since $n$ is a discrete variable, there is no closed-form for the minimum $T_{c,n}$ for a given $(\tilde{\mu},\lambda)$. However, two important \textit{approximate} solutions can be derived by replacing the discrete $n$ with a continuous variable $\bar{n}$ and minimizing Eqn. \ref{eq:Tc_nondim} analytically, resulting in two simple power laws for $T_c$.
+Since $n$ is a discrete variable, there is no closed-form for the minimum $T_{cn}$ for a given $(\tilde{\mu},\lambda)$. However, two important \textit{approximate} solutions can be derived by replacing the discrete $n$ with a continuous variable $\bar{n}$ and minimizing Eqn. \ref{eq:Tc_nondim} analytically, resulting in two simple power laws for $T_c$.
 
 
 \subsection{Rims with low torsional stiffness}\label{sec:powerlaw_1}
 Many bicycle rims are built from thin-walled open channels which have very low torsional stiffness compared with their bending stiffness. Replacing the discrete mode number $n$ with a continuous variable $\bar{n}$, we adopt the following ansatz: (a) $\bar{n}^2 \gg 1$ and (b) $\tilde{\mu}\bar{n}^2 \ll 1$. Under these conditions, Eqn. \ref{eq:Tc_nondim} becomes
 	\begin{equation}\label{eq:Tcn_small_mu}
-	T_{c,n} = \frac{2\pi EI_{11}}{n_sR^2} \left( \tilde{\mu}\bar{n}^4 + \frac{\lambda}{\bar{n}^2}\right)
+	T_{cn} = \frac{2\pi EI_{11}}{n_sR^2} \left( \tilde{\mu}\bar{n}^4 + \frac{\lambda}{\bar{n}^2}\right)
 	\end{equation}
-Minimizing Eqn. \ref{eq:Tcn_small_mu} with respect to $\bar{n}$ by setting the derivative $dT_{c,n}/d\bar{n}=0$, we obtain the scaling law
+Minimizing Eqn. \ref{eq:Tcn_small_mu} with respect to $\bar{n}$ by setting the derivative $dT_{cn}/d\bar{n}=0$, we obtain the scaling law
 	\begin{equation}\label{eq:nbar_small_mu}
 	\bar{n} = \left(\frac{\lambda}{2\tilde{\mu}} \right)
 	\end{equation}
@@ -260,20 +262,89 @@ Equation \ref{eq:Tc_small_mu} suggests that when the torsional stiffness is smal
 \subsection{Spokes much stiffer than the rim}
 A second power law regime appears when $\lambda \gg 1$ and $\tilde{\mu} \sim 1$. Under these conditions, Eqn. \ref{eq:Tc_nondim} becomes
 	\begin{equation}\label{eq:Tcn_boef}
-	T_{c,n} = \frac{2\pi EI_{11}}{n_sR^2}\left(\bar{n}^2 + \frac{\lambda}{\bar{n}^2} \right)
+	T_{cn} = \frac{2\pi EI_{11}}{n_sR^2}\left(\bar{n}^2 + \frac{\lambda}{\bar{n}^2} \right)
 	\end{equation}
 Following the same procedure in section \ref{sec:powerlaw_1} gives a separate power law, after simplification.
 	\begin{equation}\label{eq:Tc_boef}
 	T_c \approx \frac{4\pi}{n_s} \left(\bar{k}_{uu}^{el}EI_{11} \right)^{1/2} 
 	\end{equation}
-Substituting Eqn. \ref{eq:TN} for $T_c$ gives $N_{rc}=2\sqrt{\bar{k}_{uu}^{el}EI_{11}}$, which is precisely the buckling load for an infinite, straight beam on an elastic foundation~\cite{Hetenyi1946a}. Figure \ref{fig:Tc_nondim} (c) shows a comparison of Eqn. \ref{eq:Tc_boef} against 
+Substituting Eqn. \ref{eq:TN} for $T_c$ gives $N_{rc}=2\sqrt{\bar{k}_{uu}^{el}EI_{11}}$, which is precisely the buckling load for an infinite, straight beam on an elastic foundation~\cite{Hetenyi1946a}. Figure \ref{fig:Tc_nondim} (c) shows a comparison of Eqn. \ref{eq:Tc_boef} against Eqn. \ref{eq:Tc_nondim} and finite-element calculations.
 
 
 
-\section{SUB-CRITICAL BUCKLING UNDER LATERAL LOADS}
-...
+\section{EQUIVALENT SPRING MODEL}
+The lateral stiffness of the wheel can be decomposed into orthogonal modes in the form of Eqn. \ref{eq:modeshape}. Since the Fourier modes are orthogonal, the total strain energy is the sum of the strain energy in each mode.
+	\begin{equation}\label{eq:Umode}
+	U_{total} = U_0 + U_1 + U_2 + ...
+	\end{equation}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=1.0]{figures/bmd_figures-03.eps}
+\caption{Equivalent spring model. Each mode stiffness consists of three equivalent springs representing the rim bending and torsion stiffness and the spoke stiffness.}
+\label{fig:Kn}
+\end{figure}
+
+The applied lateral force and torque are determined using Castigliano's first theorem. For an applied force $P$ and no applied torque, we have
+	\begin{equation}\label{eq:Castig}
+	\begin{split}
+	P &= \frac{\partial U_n}{\partial u_n}\\% = \frac{\partial^2 U_n}{\partial u_n^2}u_n + \frac{\partial^2 U_n}{\partial u_n \partial \phi_n}\phi_n\\
+	0 &= \frac{\partial U_n}{\partial \phi_n}% = \frac{\partial^2 U_n}{\partial \phi_n^2}\phi_n + \frac{\partial^2 U_n}{\partial \phi_n \partial u_n}u_n
+	\end{split}
+	\end{equation}
+Substituting $U_{rim} + U_{spokes}$ for $U_n$ and inserting the mode shape Eqn. \ref{eq:modeshape}, Eqn. \ref{eq:Castig} becomes a linear system of equations for $u_n$ and $\phi_n$. Solving \ref{eq:Castig} for $u_n$ yields
+	\begin{equation}
+	u_n = \left(\frac{PR^3}{\pi}\right) \frac{EI_{11}+\widetilde{GJ}n^2}{EI_{11}\widetilde{GJ}n^2(n^2-1)^2 + R\bar{k}_{uu}(EI_{11}+\widetilde{GJ}n^2)}
+	\end{equation}
+The stiffness of the $n$th mode is then defined as
+	\begin{equation}\label{eq:Kn}
+	K_n = P/u_n = \left(\frac{\pi}{R^3}\right) \frac{EI_{11}\widetilde{GJ}n^2(n^2-1)^2}{EI_{11}+\widetilde{GJ}n^2} + \pi R \bar{k}_{uu}
+	\end{equation}
+
+Defining an equivalent torsion stiffness, bending stiffness, and spoke stiffness, Eqn. \ref{eq:Kn} can be written succinctly as
+	\begin{equation}\label{eq:Kn_spring}
+	K_n = \frac{K_{bending}K_{torsion}}{K_{bending}+K_{torsion}} + K_{spokes}
+	\end{equation}
+\,\,\,\, where
+	\begin{equation}\label{eq:Ktorsion}
+	K_{torsion} = \widetilde{GJ}n^2\frac{\pi (n^2-1)^2}{R^3}
+	\end{equation}
+	\begin{equation}\label{eq:Kbending}
+	K_{torsion} = EI_{11}\frac{\pi (n^2-1)^2}{R^3}
+	\end{equation}
+	\begin{equation}\label{eq:Kspokes}
+	K_{spokes} = \pi R \bar{k}_{uu}
+	\end{equation}
+The form of Equation \ref{eq:Kn_spring} suggests an equivalent spring model (Fig. \ref{fig:Kn}) for the $n$th mode in which the rim stiffness is represented by two springs connected which is then connected in parallel with the spoke stiffness. If there is a large difference between the rim bending stiffness and torsion stiffness, the equivalent rim stiffness will be dominated by the smaller of the two.
+
+With this definition, Eqn. \ref{eq:Tc_nondim} has an extremely simple form
+	\begin{equation}\label{eq:Tc_Kn}
+	T_{cn} = \frac{2R}{n_s(n^2 - R/l)}K_n
+	\end{equation}
+In this form, the benefit of adding spoke stiffness becomes readily apparent. Because the rim stiffness and spoke stiffness act in parallel, increasing either one directly impacts the maximum tension.
 
 
+% \section{SUB-CRITICAL BUCKLING UNDER LATERAL LOADS}
+% ...
+
+
+\section{FINITE-ELEMENT MODEL}
+We validated our theoretical predictions using non-linear finite-element calculations implemented in ABAQUS\textsuperscript{\textregistered} 6.14\footnote{ABAQUS\textsuperscript{\textregistered} is a registered trademark of Dassault Syst\`emes.}. The spokes and rim were both modeled using 2-node linear beam elements including shear flexibility (element type B31 in the ABAQUS library). The rim was interpolated with sufficient elements such that any given beam segment spanned less than 6$^{\circ}$ of the circle.
+
+A controlled eigenstrain was applied to the spokes by defining a coefficient of thermal expansion of 1.0 for the spokes (but not the rim) and ramping the temperature down to 150\% of the expected critical buckling strain. Mesh imperfections of the form $\cos{ns/R}$ were added to perturb the initial lateral positions of the rim nodes. Modes starting with $n=2$ up to the expected buckling mode were included. The ABAQUS Standard static solution procedure was used with non-linear geometric effects.
+
+The average spoke tension was recorded at each time step. The buckling tension was determined from a Southwell plot~\cite{Timoshenko1961a} of $u/T$ vs. $u$, where $u$ is taken at its maximum location on the rim. The deflection of a loaded structure with an initial imperfection is (to first order)
+	\begin{equation}\label{eq:Southwell}
+	u = \frac{a}{T_c/T - 1}
+	\end{equation}
+Therefore the slope of $u/T$ vs. $u$ is $1/T_c$. The buckling tension was also calculated by finding the strain at which the average tension departs from linearity by more than 3\%. The two methods were found to give results in very close agreement.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=1.0]{figures/bmd_figures-07.eps}
+\caption{\textbf{(a)} Normalized spoke tension vs. lateral deflection. \textbf{(b)} Southwell plot.}
+\label{fig:Southwell}
+\end{figure}
 
 \section{CONCLUSIONS}
 ...
@@ -283,6 +354,7 @@ Substituting Eqn. \ref{eq:TN} for $T_c$ gives $N_{rc}=2\sqrt{\bar{k}_{uu}^{el}EI
 \bibliographystyle{naturemag}
 \bibliography{C:/Users/matt/OneDrive/Documents/Research/bibtex/Papers-BMD2016.bib}
 
+\newpage
 \section*{LIST OF TERMS}
 The following notation is used in this paper:
 
