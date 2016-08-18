@@ -1,6 +1,14 @@
 \documentclass{bmd2016p}
 \usepackage{epstopdf}
 
+\newcommand{\e}{\ensuremath{\hat{\bm{e}}_1}}
+\newcommand{\ee}{\ensuremath{\hat{\bm{e}}_2}}
+\newcommand{\eee}{\ensuremath{\hat{\bm{e}}_3}}
+
+\newcommand{\n}{\ensuremath{\hat{\bm{n}}_1}}
+\newcommand{\nn}{\ensuremath{\hat{\bm{n}}_2}}
+\newcommand{\nnn}{\ensuremath{\hat{\bm{n}}_3}}
+
 \begin{document}
 
 \begin{center}
@@ -34,7 +42,6 @@ e-mail: o-balogun@northwestern.edu\\
 
 \section*{ABSTRACT}
 
-...
 
 \begin{keywords}
 bicycle wheel, 
@@ -91,7 +98,7 @@ The rim is modeled as an initially circular beam with a constant cross-section. 
 \begin{figure}[!ht]
 \centering
 \includegraphics[scale=1.0]{figures/bmd_figures-06.eps}
-\caption{Deformation of a rim cross-section. The shear center $S\rightarrow S'$ translates by the vector $\bm{u} = u\hat{\bm{e}}_1 + v\hat{\bm{e}}_2 + w\hat{\bm{e}}_3$ and rotates through an angle $\phi$.}
+\caption{Deformation of a rim cross-section. The shear center $S\rightarrow S'$ translates by the vector $\bm{u} = u\e + v\ee + w\eee$ and rotates through an angle $\phi$.}
 \label{fig:def}
 \end{figure}
 
@@ -130,31 +137,31 @@ The axial compressive force in the rim moves through this differential displacem
 
 In this paper we consider bicycle wheels with slender prestressed spokes. We model a single spoke as an elastic bar pinned at each end. This ensures that the spoke force is always collinear with the spoke axis. We fix our global coordinate system to the hub, which is assumed to be rigid. Therefore, the displacement of the hub node of a spoke is zero. The linearized elongation of a spoke is given by
 	\begin{equation}\label{eq:selong}
-	\Delta l = \bm{u}_n\cdot \hat{\bm{n}}_1
+	\Delta l = \bm{u}_n\cdot \n
 	\end{equation}
-where $\bm{u}_n$ is the displacement vector of the spoke nipple and $\hat{\bm{n}}_1$ is a unit vector pointing from the spoke nipple to the hub eyelet. The linearized rotation of the spoke is given by
+where $\bm{u}_n$ is the displacement vector of the spoke nipple and \n{} is a unit vector pointing from the spoke nipple to the hub eyelet. The linearized rotation of the spoke is given by
 	\begin{equation}\label{eq:srot1}
-	\Omega_1 = \frac{1}{l} \bm{u}_n\cdot \hat{\bm{n}}_2
+	\Omega_1 = \frac{1}{l} \bm{u}_n\cdot \nn
 	\end{equation}
 	\begin{equation}\label{eq:srot2}
-	\Omega_2 = \frac{1}{l} \bm{u}_n\cdot \hat{\bm{n}}_3
+	\Omega_2 = \frac{1}{l} \bm{u}_n\cdot \nnn
 	\end{equation}
-where $\hat{\bm{n}}_2$ and $\hat{\bm{n}}_3$ are two orthogonal unit vectors orthogonal to $\hat{\bm{n}}_1$, and $l$ is the spoke length.
+where \nn{} and \nnn{} are two orthogonal unit vectors orthogonal to \n{}, and $l$ is the spoke length.
 
 The elongation produces a net force on the rim parallel to the original spoke axis equal to
 	\begin{equation}\label{eq:sF1}
-	f_1 = E_sA_s\left(\frac{\Delta l}{l}\right)\hat{\bm{n}}_1 = \frac{E_sA_s}{l} \hat{\bm{n}}_1 \cdot \bm{u}_n 
+	f_1 = E_sA_s\left(\frac{\Delta l}{l}\right)\n = \frac{E_sA_s}{l} \n \cdot \bm{u}_n 
 	\end{equation}
 The rotation of the spoke produces net forces on the rim perpendicular to the original spoke axis due to the rotation of the initial tension vector.
 	\begin{equation}\label{eq:sF2}
-	f_2 = T \sin{\Omega_1} \approx \frac{T}{l} \hat{\bm{n}}_2 \cdot \bm{u}_n
+	f_2 = T \sin{\Omega_1} \approx \frac{T}{l} \nn \cdot \bm{u}_n
 	\end{equation}
 	\begin{equation}\label{eq:sF3}
-	f_3 = T \sin{\Omega_2} \approx \frac{T}{l} \hat{\bm{n}}_3 \cdot \bm{u}_n
+	f_3 = T \sin{\Omega_2} \approx \frac{T}{l} \nn \cdot \bm{u}_n
 	\end{equation}
-since $\hat{\bm{n}}_1,\hat{\bm{n}}_2,\hat{\bm{n}}_3$ are mutually orthogonal, the total force on the rim is given by $\bm{f} = \bm{k}_f \cdot \bm{u}_n$, where the spoke stiffness matrix is given by
+since \n{}, \nn{}, \nnn{} are mutually orthogonal, the total force on the rim is given by $\bm{f} = \bm{k}_f \cdot \bm{u}_n$, where the spoke stiffness matrix is given by
 	\begin{equation}\label{eq:kf}
-	\bm{k}_f = \frac{E_sA_s}{l}\hat{\bm{n}}_1\hat{\bm{n}}_1 + \frac{T}{l}(\hat{\bm{n}}_2\hat{\bm{n}}_2 + \hat{\bm{n}}_3\hat{\bm{n}}_3)
+	\bm{k}_f = \frac{E_sA_s}{l}\n\n + \frac{T}{l}(\nn\nn + \nnn\nnn)
 	\end{equation}
 The first term in Eqn.~\ref{eq:kf} is the {\bf elastic stiffness} and the second term is the {\bf tension stiffness}. The tension stiffness is the component responsible for the transverse vibrations of a guitar string, e.g.
 
@@ -166,11 +173,11 @@ Following the approach of Smith~\cite{Smith1901a} and Pippard~\cite{Pippard1932d
 	\begin{equation}\label{eq:w_spokes}
 	\bar{w} = \int_0^{u_n} \bar{\bm{f}} \cdot d\bm{u}_n = \frac{1}{2} \bm{u}_n \cdot \bar{\bm{k}} \cdot \bm{u}_n
 	\end{equation}
-The line of action is assumed to pass sufficiently close to the rim shear center that any difference between the displacement of the spoke nipple and the displacement of the shear center can be ignored. Therefore $\bm{u}_n = \bm{u}$. Substituting a lateral buckling displacement $\bm{u}=u\hat{\bm{e}}_1$ into Eqn. \ref{eq:w_spokes} and integrating over the length of the rim gives the strain energy stored in the spoke system.
+The line of action is assumed to pass sufficiently close to the rim shear center that any difference between the displacement of the spoke nipple and the displacement of the shear center can be ignored. Therefore $\bm{u}_n = \bm{u}$. Substituting a lateral buckling displacement $\bm{u}=u\e$ into Eqn. \ref{eq:w_spokes} and integrating over the length of the rim gives the strain energy stored in the spoke system.
 	\begin{equation}\label{eq:Us}
 	U_{spokes} = \int_0^{2\pi} \bar{w} \, ds = \frac{1}{2} \bar{k}_{uu}u^2
 	\end{equation}
-The continuum stiffness can be written $\bar{\bm{k}} = \bar{\bm{k}}^{el} + T\bar{\bm{k}}^{tens}$, where the dependence on $T$ is shown explicitly. A very close approximation for the $\bar{k}_{uu}$ component for a symmetrically dished wheel is given by
+The continuum spoke stiffness can be written $\bar{\bm{k}} = \bar{\bm{k}}^{el} + T\bar{\bm{k}}^{tens}$, where the dependence on $T$ is shown explicitly. A very close approximation for the $\bar{k}_{uu}$ component for a symmetrically dished wheel is given by
 	\begin{equation}\label{eq:kuu}
 	\bar{k}_{uu} = \frac{n_sE_sA_s}{2\pi Rl}\sin^2{\alpha} + \frac{n_s T}{2\pi Rl}
 	\end{equation}
@@ -275,5 +282,51 @@ Substituting Eqn. \ref{eq:TN} for $T_c$ gives $N_{rc}=2\sqrt{\bar{k}_{uu}^{el}EI
 
 \bibliographystyle{naturemag}
 \bibliography{C:/Users/matt/OneDrive/Documents/Research/bibtex/Papers-BMD2016.bib}
+
+\section*{LIST OF TERMS}
+The following notation is used in this paper:
+
+\begin{tabular}{c|p{12cm}}
+\hline
+\textit{\textbf{Term}} & \textit{\textbf{Definition}} \\
+\hline
+$n_s$		& Number of spokes\\
+$E_s, A_s$	& Spoke Young's modulus and cross-sectional area\\
+$l$			& Spoke length\\
+$\alpha$	& Out-of-plane spoke angle--wall angle of a hypothetical ``cone'' of spokes\\
+$\beta$		& In-plane spoke angle--measured between the in-plane projection of the spoke and
+			  a radius of the wheel\\
+$\n$		& Unit vector aligned with the spoke axis\\
+$\nn,\nnn$	& Two unit vectors perpendicular to the spoke axis\\
+$\e,\ee,\eee$ & Coordinate axes defined at the rim shear center\\
+$\bm{u}$	& Displacement of the rim shear center\\
+$u,v,w$		& Vector components of $\bm{u}$ in the \e{}, \ee{}, \eee{} directions.\\
+$\phi$		& Rotation of the rim cross-section about the $\hat{\bm{e}}_3$ axis.\\
+$\delta u, \delta \phi$ & Virtual displacement and rotation\\
+$u_n, \phi_n$ & Buckling mode coefficients\\
+$n$			& Buckling mode number\\
+$T$			& Tension in a spoke\\
+$T_{cn}$	& Critical tension for the $n$th mode\\
+$T_c$		& Critical buckling tension (minimum of $T_{cn}$ over all modes)\\
+$T_e$		& ``Euler'' tension--tension which would produce an axial force in the rim
+			  equal to the buckling load for a straight beam-column of length $2\pi R$\\
+$\bm{f}$	& Force exerted by a spoke on the rim\\
+$f_1, f_2,f_3$ & Vector components of $\bm{f}$\\
+$\bm{k}_f$	& Stiffness matrix for a single spoke\\
+$\bar{\bm{k}}$ & Equivalent stiffness per-unit-length of the spoke system. $\bar{\bm{k}} = \bar{\bm{k}}^{el} + \bar{\bm{k}}^{tens}$\\
+$\bar{\bm{k}}^{el}$ & Part of $\bar{\bm{k}}$ proportional to $E_sA_s$\\
+$\bar{\bm{k}}^{tens}$ & Part of $\bar{\bm{k}}$ proportional to $T$\\
+$\bar{k}_{ij}$ & Tensor components of $\bar{\bm{k}}$\\
+$R$			& Rim radius--measured from the rim shear center\\
+$E$			& Rim Young's modulus\\
+$I_{11}$	& Second moment of area of the rim in the lateral direction\\
+$J$			& Rim torsion constant\\
+$I_w$		& Rim warping constant\\
+$\widetilde{GJ}$ & Effective torsional rigidity including both Saint-Venant torsion and warping\\
+$\tilde{\mu}$ & Ratio of effective torsional rigidity to bending rigidity: $\widetilde{GJ}/EI_{11}$\\
+$\lambda$	& Ratio of spoke system stiffness to rim bending stiffness OR ratio of rim radius to 
+			  the characteristic length of a beam on an elastic foundation.\\
+\hline
+\end{tabular}
 
 \end{document}
