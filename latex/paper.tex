@@ -309,17 +309,17 @@ Defining an equivalent torsion stiffness, bending stiffness, and spoke stiffness
 	\end{equation}
 \,\,\,\, where
 	\begin{equation}\label{eq:Ktorsion}
-	K_{torsion} = \widetilde{GJ}n^2\frac{\pi (n^2-1)^2}{R^3}
+	K_{torsion} = \frac{\pi\widetilde{GJ}n^2}{R^3}(n^2-1)^2
 	\end{equation}
 	\begin{equation}\label{eq:Kbending}
-	K_{torsion} = EI_{11}\frac{\pi (n^2-1)^2}{R^3}
+	K_{torsion} = \frac{\pi EI_{11}}{R^3}(n^2-1)^2
 	\end{equation}
 	\begin{equation}\label{eq:Kspokes}
 	K_{spokes} = \pi R \bar{k}_{uu}
 	\end{equation}
 The form of Equation \ref{eq:Kn_spring} suggests an equivalent spring model (Fig. \ref{fig:Kn}) for the $n$th mode in which the rim stiffness is represented by two springs connected which is then connected in parallel with the spoke stiffness. If there is a large difference between the rim bending stiffness and torsion stiffness, the equivalent rim stiffness will be dominated by the smaller of the two.
 
-With this definition, Eqn. \ref{eq:Tc_nondim} has an extremely simple form
+With this definition, the critical buckling tension for the $n$th mode (Eqn. \ref{eq:Tc_nondim}) has an extremely simple form
 	\begin{equation}\label{eq:Tc_Kn}
 	T_{cn} = \frac{2RK_n}{n_s(n^2 - R/l)}
 	\end{equation}
