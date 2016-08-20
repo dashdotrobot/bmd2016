@@ -41,7 +41,9 @@ e-mail: o-balogun@northwestern.edu\\
 \end{center}
 
 \section*{ABSTRACT}
-A bicycle wheel's spokes must be kept under tension to prevent them from buckling under load. However, above a certain critical tension, the rim will bend and twist out of its plane.
+The spokes of a bicycle wheel must be kept under tension to prevent them from buckling under external loads. However, above a certain critical tension, the rim will bend and twist out of its plane into a ``pringle'' or ``taco'' shape. Despite its importance for wheel strength and safety, there is no formula in the literature for the maximum tension a wheel can withstand before buckling.
+
+Here we derive such a formula. The non-dimensionalized buckling tension depends only on two parameters which are identified as the ratio of torsional stiffness to bending stiffness, and the ratio of spoke stiffness to bending stiffness. The number of ``waves'' in the buckled shape is determined by two stiffness ratios and may in general by greater than 2. Finally, we show that the wheel may be represented by a system of equivalent springs, two series-connected springs for the rim bending and torsion stiffness, and a parallel-connected spring for the spoke system.
 
 
 \begin{keywords}
@@ -293,15 +295,15 @@ The applied lateral force and torque are determined using Castigliano's first th
 	\end{split}
 	\end{equation}
 Substituting $U_{rim} + U_{spokes}$ for $U_n$ and inserting the mode shape Eqn. \ref{eq:modeshape}, Eqn. \ref{eq:Castig} becomes a linear system of equations for $u_n$ and $\phi_n$. Solving \ref{eq:Castig} for $u_n$ yields
-	\begin{equation}
+	\begin{equation}\label{eq:un}
 	u_n = \left(\frac{PR^3}{\pi}\right) \frac{EI_{11}+\widetilde{GJ}n^2}{EI_{11}\widetilde{GJ}n^2(n^2-1)^2 + R\bar{k}_{uu}(EI_{11}+\widetilde{GJ}n^2)}
 	\end{equation}
-The stiffness of the $n$th mode is then defined as
-	\begin{equation}\label{eq:Kn}
-	K_n = P/u_n = \left(\frac{\pi}{R^3}\right) \frac{EI_{11}\widetilde{GJ}n^2(n^2-1)^2}{EI_{11}+\widetilde{GJ}n^2} + \pi R \bar{k}_{uu}
-	\end{equation}
+% The stiffness of the $n$th mode is then defined as
+	% \begin{equation}\label{eq:Kn}
+	% K_n = P/u_n = \left(\frac{\pi}{R^3}\right) \frac{EI_{11}\widetilde{GJ}n^2(n^2-1)^2}{EI_{11}+\widetilde{GJ}n^2} + \pi R \bar{k}_{uu}
+	% \end{equation}
 
-Defining an equivalent torsion stiffness, bending stiffness, and spoke stiffness, Eqn. \ref{eq:Kn} can be written succinctly as
+Defining an equivalent torsion stiffness, bending stiffness, and spoke stiffness, the mode stiffness $P/u_n$ can be obtained from Eqn. \ref{eq:un} as
 	\begin{equation}\label{eq:Kn_spring}
 	K_n = \frac{K_{bending}K_{torsion}}{K_{bending}+K_{torsion}} + K_{spokes}
 	\end{equation}
@@ -319,7 +321,7 @@ The form of Equation \ref{eq:Kn_spring} suggests an equivalent spring model (Fig
 
 With this definition, Eqn. \ref{eq:Tc_nondim} has an extremely simple form
 	\begin{equation}\label{eq:Tc_Kn}
-	T_{cn} = \frac{2R}{n_s(n^2 - R/l)}K_n
+	T_{cn} = \frac{2RK_n}{n_s(n^2 - R/l)}
 	\end{equation}
 In this form, the benefit of adding spoke stiffness becomes readily apparent. Because the rim stiffness and spoke stiffness act in parallel, increasing either one directly impacts the maximum tension.
 
@@ -328,23 +330,24 @@ In this form, the benefit of adding spoke stiffness becomes readily apparent. Be
 % ...
 
 
-\section{FINITE-ELEMENT MODEL}
-We validated our theoretical predictions using non-linear finite-element calculations implemented in ABAQUS\textsuperscript{\textregistered} 6.14\footnote{ABAQUS\textsuperscript{\textregistered} is a registered trademark of Dassault Syst\`emes.}. The spokes and rim were both modeled using 2-node linear beam elements including shear flexibility (element type B31 in the ABAQUS library). The rim was interpolated with sufficient elements such that any given beam segment spanned less than 6$^{\circ}$ of the circle.
+\section{FINITE-ELEMENT CALCULATIONS}
+We validated our theoretical predictions against non-linear finite-element calculations implemented in ABAQUS\textsuperscript{\textregistered} 6.14\footnote{ABAQUS\textsuperscript{\textregistered} is a registered trademark of Dassault Syst\`emes.}. The spokes and rim were both modeled using 2-node linear beam elements including shear flexibility (element type B31 in the ABAQUS library). The rim was interpolated with sufficient elements such that any given beam segment spanned less than 6$^{\circ}$ of the circle.
 
-A controlled eigenstrain was applied to the spokes by defining a coefficient of thermal expansion of 1.0 for the spokes (but not the rim) and ramping the temperature down to 150\% of the expected critical buckling strain. Mesh imperfections of the form $\cos{ns/R}$ were added to perturb the initial lateral positions of the rim nodes. Modes starting with $n=2$ up to the expected buckling mode were included. The ABAQUS Standard static solution procedure was used with non-linear geometric effects.
+A controlled tensioning strain was applied to the spokes by defining a coefficient of thermal expansion of 1.0 for the spokes (but not the rim) and ramping the temperature down to 150\% of the expected critical buckling strain. Mesh imperfections of the form $\cos{ns/R}$ were added to perturb the initial lateral positions of the rim nodes. Modes starting with $n=2$ up to the expected buckling mode were included. The solution was obtained via an implicit integration procedure (ABAQUS Standard) including non-linear geometric effects.
 
-The average spoke tension was recorded at each time step. The buckling tension was determined from a Southwell plot~\cite{Timoshenko1961a} of $u/T$ vs. $u$, where $u$ is taken at its maximum location on the rim. The deflection of a loaded structure with an initial imperfection is (to first order)
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=1.0]{figures/bmd_figures-07.eps}
+\caption{\textbf{(a)} Normalized spoke tension vs. lateral deflection. \textbf{(b)} Southwell plot for a simulated wheel with an imperfection.}
+\label{fig:Southwell}
+\end{figure}
+
+The average spoke tension was recorded at each loading step. The buckling tension was determined from a Southwell plot~\cite{Timoshenko1961a} of $u/T$ vs. $u$, where $u$ is taken at its maximum location on the rim. The deflection of a loaded structure with an initial imperfection is approximately
 	\begin{equation}\label{eq:Southwell}
 	u = \frac{a}{T_c/T - 1}
 	\end{equation}
 Therefore the slope of $u/T$ vs. $u$ is $1/T_c$. The buckling tension was also calculated by finding the strain at which the average tension departs from linearity by more than 3\%. The two methods were found to give results in very close agreement.
 
-\begin{figure}[!ht]
-\centering
-\includegraphics[scale=1.0]{figures/bmd_figures-07.eps}
-\caption{\textbf{(a)} Normalized spoke tension vs. lateral deflection. \textbf{(b)} Southwell plot.}
-\label{fig:Southwell}
-\end{figure}
 
 \section{CONCLUSIONS}
 ...
