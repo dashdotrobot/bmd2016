@@ -31,7 +31,7 @@ e-mail: mford@u.northwestern.edu\\[2.5ex]
 $^\#$ Department of Mechanical and Industrial Engineering\\
 Northeastern University\\
 360 Huntington Ave., Boston, MA 02115, USA\\
-e-mail: j.papadopoulos@neu.edu\\[2.5ex]
+e-mail: j.papadopoulos@northeastern.edu\\[2.5ex]
 
 $^\dag$ Department of Civil Engineering\\
 Northwestern University\\
@@ -41,23 +41,24 @@ e-mail: o-balogun@northwestern.edu\\
 \end{center}
 
 \section*{ABSTRACT}
-The spokes of a bicycle wheel must be kept under tension to prevent them from buckling under external loads. However, above a certain critical tension, the rim will bend and twist out of its plane into a ``pringle'' or ``taco'' shape. Despite its importance for wheel strength and safety, there is no formula in the literature for the maximum tension a wheel can withstand before buckling.
+Bicycle spokes brace and stiffen the slender rim, but only as long as they do not lose pre-tension under external loads. However, above a certain critical tension, the rim will buckle into a non-planar saddle shape. Despite its importance for wheel strength and safety, there is no formula in the literature for the maximum tension a wheel can withstand before buckling.
 
-Here we derive such a formula. The non-dimensionalized buckling tension depends only on two parameters which are identified as the ratio of torsional stiffness to bending stiffness, and the ratio of spoke stiffness to bending stiffness. The number of ``waves'' in the buckled shape is determined by these two stiffness ratios and may in general by greater than 2. Finally, we show that the wheel may be represented by a system of equivalent springs: two series-connected springs for the rim bending and torsion stiffness, connected in parallel with a spring for the spoke system.
+Here we derive such a formula. The non-dimensionalized buckling tension depends only on two parameters which are identified as the ratio of torsional stiffness to bending stiffness, and the ratio of lateral spoke bracing stiffness to rim bending stiffness. The precise buckled shape is determined by these two stiffness ratios and the number of positive peaks of the lateral displacement may in general by greater than 2. We show that the wheel may be represented by a system of equivalent springs: two series-connected springs for the rim bending and torsion stiffness, connected in parallel with a spring for the spoke system.
 
 \begin{keywords}
 bicycle wheel, 
+bicycle safety, 
+wheel strength, 
 buckling, 
-bifurcation,
-bicycle safety.
+flexural-torsional.
 \end{keywords}
 
 
 
 \section{INTRODUCTION}
-The earliest ``bicycles'' were built in the workshops of carriage makers who adapted the wheel technology of the time. These wheels typically had iron tires, wooden rims and stout wooden spokes which bore the weight of the machine and rider in compression. The spokes needed to be wide enough to prevent lateral buckling, which made them very heavy and limited their diameter. Around 1869, the tension-spoke wheel, an idea proposed in 1808 by Sir George Cayley but never realized, found its first application on the rapidly-developing bicycle \cite{Ackroyd2011a,Clayton1991a}. Tangential-spoking was developed soon thereafter, and the typical bicycle wheel has not changed dramatically in form since then.
+The earliest bicycles were built in the workshops of carriage makers who adapted the wheel technology of the time. These wheels typically had iron tires, wooden rims and stout wooden spokes which bore the weight of the machine and rider in compression~\cite{Herlihy2004a}. The spokes needed to be wide enough to prevent lateral buckling and to keep the rim planar, which made them very heavy and limited their diameter. Around 1869, the tension-spoke wheel, an idea proposed in 1808 by Sir George Cayley but never realized, found its first application on the rapidly-developing bicycle~\cite{Ackroyd2011a,Clayton1991b}. Tangential-spoking was developed soon thereafter, and the typical bicycle wheel has not changed dramatically in form since then.
 
-The tension-spoke wheel is a prestressed structure and is susceptible to buckling under internal forces. As the spokes are tightened uniformly, the rim deforms radially to accommodate the spoke strain. At a critical tension, the rim buckles out of its initial plane. The post-buckling configuration is generally stable and the original shape of the wheel can often be recovered by reducing the tension. Buckling can also be triggered by external forces in an otherwise stable wheel leading to a release of strain energy. This is an unstable process which generally leads to a permanently ``taco-ed'' wheel.
+The tension-spoke wheel is a prestressed structure and is susceptible to buckling under internal forces. As the spokes are tightened uniformly, the rim deforms radially under uniform compression. At a critical tension, the rim buckles out of its initial plane. The post-buckling load-displacement curve is generally stable and the original shape of the wheel can often be recovered by reducing the tension. Buckling can also be triggered by external forces in an otherwise stable wheel leading to a release of strain energy. This process can lead to plastic yielding of the rim which makes wheel repair significantly more difficult.
 
 Despite its implications for wheel strength, the buckling problem has never received a rigorous treatment to our knowledge. Jobst Brandt alludes to buckling in his practical manual for wheelbuilders~\cite{Brandt1993c}:
 
@@ -65,11 +66,11 @@ Despite its implications for wheel strength, the buckling problem has never rece
 \noindent``If the wheel becomes untrue in two large waves during stress relieving, the maximum, safe tension has been exceeded. Approach this tension carefully to avoid major rim distortions. When the wheel loses alignment from stress relieving, loosen all spokes a half turn before retruing the wheel.''
 \end{quotation}
 
-He did not discuss the problem further, but suggested that wheel failure commonly occurs due to a loss of lateral stability caused by spoke buckling. Pippard and Francis~\cite{Pippard1932d} derived an equation for lateral deflection based on an elastic foundation model, but did not discuss stability and neglected any effects of spoke tension.
+He did not discuss the problem of buckling under tension further, but proposed that wheel failure commonly occurs due to lateral buckling when external loads have caused spokes to lose tension. Pippard and Francis~\cite{Pippard1932d} derived an equation for lateral deflection based on an elastic foundation model, but did not discuss stability and neglected any effects of spoke tension.
 
-The bicycle wheel can be modeled as an elastically supported arch in which the included angle is allowed to go to $2\pi$. Timoshenko and Gere~\cite{Timoshenko1961a} gave a formula for the critical load for a ring with doubly-symmetric cross-section subjected to radial loads. The theory of flexural-torsional buckling of monosymmetric arches (bicycle rims have only one plane of symmetry) was broadly formalized by Trahair and Papangelis~\cite{Trahair1987b} using the virtual work approach to derive the equilibrium and stability equations. Their theory has been extended to treat arches restrained by continuous~\cite{Pi2002b} or discrete~\cite{Bradford2002d} elastic supports and elastic end restraints~\cite{Guo2014b}.
+The theory of bicycle wheel buckling is closely related to the theory of flexural-torsional buckling of arches. Timoshenko and Gere~\cite{Timoshenko1961a} gave a formula for the critical load for a ring with doubly-symmetric cross-section subjected to radial loads. The theory of flexural-torsional buckling of monosymmetric arches (bicycle rim cross-sections generally have only one plane of symmetry) was broadly formalized by Trahair and Papangelis~\cite{Trahair1987b} using the virtual work approach to derive the equilibrium and stability equations. Their theory has been extended to treat arches restrained by continuous~\cite{Pi2002b} or discrete~\cite{Bradford2002d} elastic supports and elastic end restraints~\cite{Guo2014b}.
 
-The problem of the prestressed bicycle wheel is unique for a number of reasons. First, buckling is caused by internal rather than external forces. Second, the spokes act both as elastic restraints resisting buckling and as prestressing elements causing buckling. Third, the lateral, radial, and torsional restraining actions of the spokes are coupled---i.e. lateral deflection at a spoke may produce lateral, radial, and torsional reactions. These considerations extend to other structural systems. Large observation wheels such as the London Eye~\cite{Mann2001a} and the Singapore Flyer~\cite{Allsop2009a} resemble large bicycle wheels and achieve lateral stability due to the bracing angle of prestressed cables, and must be designed against flexural-torsional buckling.
+The problem of the prestressed bicycle wheel is unique for a number of reasons. First, buckling is caused by internal rather than external forces. Second, the spokes act both as elastic restraints resisting buckling and as prestressing elements causing buckling. Third, the lateral, radial, and torsional restraining actions of the spokes are coupled---i.e. lateral deflection of the rim may produce lateral, radial, and torsional reactions from the spokes. These considerations extend to other structural systems. Large observation wheels such as the London Eye~\cite{Mann2001a} and the Singapore Flyer~\cite{Allsop2009a} resemble large bicycle wheels with lateral stability due to the bracing angle of prestressed cables, and must be designed against flexural-torsional buckling.
 
 
 
@@ -83,7 +84,7 @@ A typical bicycle wheel (Fig. \ref{fig:schematic}) consists of a slender rim con
 \label{fig:schematic}
 \end{figure}
 
-To hold the spokes in tension, the rim must be under compression. An accurate approximation\footnote{95\% accurate for 6 spokes, $\alpha=10^{\circ}$, $\beta=10^{\circ}$. Increasing the number of spokes only improves the estimate.} was given by Sharp~\cite{Sharp1977a} by considering a force balance on the top (or bottom) half of the rim.
+To hold the spokes in tension, the rim must be under compression. An accurate approximation\footnote{95\% accurate for 6 spokes, $\alpha=10^{\circ}$, $\beta=10^{\circ}$, where angles $\alpha$ and $\beta$ are defined in Fig. \ref{fig:schematic}. Increasing the number of spokes only improves the estimate.} was given by Sharp~\cite{Sharp1977a} by considering a force balance on the top (or bottom) half of the rim.
 	\begin{equation}\label{eq:TN}
 	N_r = \frac{n_sT}{2\pi}
 	\end{equation}
@@ -92,7 +93,7 @@ The spokes act like guy-wires, both supporting the rim radially and stabilizing 
 
 \subsection{Rim equations}
 
-The rim is modeled as an initially circular beam with a constant cross-section. For simplicity we will assume that the shear center and centroid of the cross-section coincide. Except for warping deformation, plane cross-sections remain planar and transverse shear flexibility is neglected. Furthermore, we assume that the rim radius is much larger than the cross-sectional dimensions.
+The rim is modeled as an initially circular beam with a constant cross-section. For simplicity in this abbreviated treatment, we will assume that the shear center and centroid of the cross-section coincide. Except for warping deformation, plane cross-sections remain planar and transverse shear flexibility is neglected. Furthermore, we assume that the rim radius is much larger than the cross-sectional dimensions.
 
 \begin{figure}[!ht]
 \centering
@@ -111,7 +112,7 @@ The deformed configuration of the rim is described by the displacement of the sh
 	\begin{equation}\label{eq:k3}
 	\kappa_3 = \phi' + \frac{1}{R} u'
 	\end{equation}
-The symbol $()'$ indicates a derivative with respect to arc-length $s$. It can easily be verified that Equations \ref{eq:k1}--\ref{eq:k3} simplify to the standard equations for straight beams in the limit $R\rightarrow \infty$. The total strain energy is decomposed into lateral bending, uniform torsion, and warping terms which are related to the curvatures.
+The symbol $()'$ indicates a derivative with respect to arc-length $s$ along the \eee{} direction. It can easily be verified that Equations \ref{eq:k1}--\ref{eq:k3} simplify to the standard equations for straight beams in the limit $R\rightarrow \infty$. The total strain energy is decomposed into lateral bending, uniform torsion, and warping terms which are related to the curvatures.
 % The curvature and twist rate produce a bending moment and twisting moment equal to
 	% \begin{equation}\label{eq:M2}
 	% M_2 = EI_{11} \kappa_2
@@ -122,6 +123,8 @@ The symbol $()'$ indicates a derivative with respect to arc-length $s$. It can e
 	\begin{equation}\label{eq:Urim}
 	U_{rim} = \frac{1}{2} \int_0^{2\pi} \left( EI_{11} \kappa_2^2 + GJ \kappa_3^2 + EI_w (\kappa_3')^2 \right)\, ds
 	\end{equation}
+The warping energy is primarily related to the bending energy in the sidewalls (which act as beam flanges) of the rim\footnote{See http://www.steel-insdag.org/TeachingMaterial/Chapter17.pdf for a simple treatment.}. The warping constant $I_w$ has units of m$^6$, and for single-wall rims the warping stiffness $EI_w$ generally exceeds the torsion stiffness $GJ$.
+
 The length of a line segment of the rim is assumed to remain constant during buckling. The apparent shortening of an initial line segment $ds$ is given by the difference between $ds$ and $ds'$, the in-plane component of the deformed line segment.
 	\begin{equation}\label{eq:ds}
 	ds - ds' = ds - \sqrt{ds^2 - \left(\frac{du}{ds}ds\right)^2} \approx \frac{1}{2} (u')^2 \, ds
@@ -162,7 +165,7 @@ since \n{}, \nn{}, \nnn{} are mutually orthogonal, the total force on the rim is
 	\end{equation}
 The first term in Eqn.~\ref{eq:kf} is the {\bf elastic stiffness} and the second term is the {\bf tension stiffness}. The tension stiffness is the component responsible for the transverse vibrations of a guitar string, e.g. The term $\n\n$ is the dyadic product, or tensor product (also called the outer product), and is defined by the property $\n\n\cdot \bm{v} = (\n\cdot \bm{v})\n$ for any vector $\bm{v}$.
 
-Formalizing the approach of Smith~\cite{Smith1901a} and Pippard~\cite{Pippard1932d}, we will approximate the spoke system as a continuous elastic ``disc'' which exerts a distributed load on the rim. The stiffness per unit length is given by the sum of the spoke stiffnesses in one periodic grouping of $n_p$ spokes, divided by the arc length of the grouping.
+Formalizing the approach of Smith~\cite{Smith1901a} and Pippard~\cite{Pippard1932d}, we will approximate the spoke system as a continuous elastic ``disc'' which exerts a distributed load on the rim. The stiffness per unit length is given by the sum of the spoke stiffnesses in one periodic grouping of $n_p$ spokes, divided by the arc length of the grouping\footnote{For a conventional cross-laced wheel, $n_p=4$: drive-side pulling spoke, drive-side trailing spoke, left-side pulling spoke, left-side trailing spoke. For a radial-spoked wheel, $n_p=2$: drive-side spoke, left-side spoke.}.
 	\begin{equation}\label{eq:kbar}
 	\bar{\bm{k}} = \frac{1}{2\pi R}\left(\frac{n_s}{n_p}\right) \sum_i^{n_p} \bm{k}_{f, i}
 	\end{equation}
@@ -170,7 +173,7 @@ Formalizing the approach of Smith~\cite{Smith1901a} and Pippard~\cite{Pippard193
 	\begin{equation}\label{eq:w_spokes}
 	\bar{w} = \int_0^{\bm{u}_n} \bar{\bm{f}} \cdot d\bm{u}_n = \frac{1}{2} \bm{u}_n \cdot \bar{\bm{k}} \cdot \bm{u}_n
 	\end{equation}
-The line of action is assumed to pass sufficiently close to the rim shear center that any difference between the displacement of the spoke nipple and the displacement of the shear center can be ignored. Therefore $\bm{u}_n = \bm{u}$. Substituting a lateral buckling displacement $\bm{u}=u\e$ into Eqn. \ref{eq:w_spokes} and integrating over the length of the rim gives the strain energy stored in the spoke system.
+Each spoke is assumed to terminate at the rim shear center. Therefore $\bm{u}_n = \bm{u}$. Substituting a lateral buckling displacement $\bm{u}=u\e$ into Eqn. \ref{eq:w_spokes} and integrating over the length of the rim gives the strain energy stored in the spoke system.
 	\begin{equation}\label{eq:Us}
 	U_{spokes} = \int_0^{2\pi} \bar{w} \, ds = \frac{1}{2} \bar{k}_{uu}u^2
 	\end{equation}
@@ -192,7 +195,7 @@ We assume a buckled shape of the form
 	\phi &= \delta\phi_n \cos{\frac{ns}{R}}
 	\end{split}
 	\end{equation}
-Substituting the buckling mode shape Eqn. \ref{eq:modeshape} into Eqns. \ref{eq:Urim}, \ref{eq:Vrim}, and \ref{eq:Us} and substituting into Eqn. \ref{eq:TotPot} yields a buckling criterion for the $n$th mode.
+\,\,\,\, where $n$ is the number of positive peaks of the lateral displacement. Substituting the buckling mode shape Eqn. \ref{eq:modeshape} into Eqns. \ref{eq:Urim}, \ref{eq:Vrim}, and \ref{eq:Us} and substituting into Eqn. \ref{eq:TotPot} yields a buckling criterion for the $n$th mode.
 	\begin{multline}\label{eq:ECrit}
 	\frac{\pi EI_{11}}{R^3}(n^2 \delta u_n - R\delta\phi_n)^2 + \frac{\pi n^2}{R^2}\left(GJ + \frac{EI_w}{R^2}n^2\right)(\delta u_n-R\delta\phi_n)^2 + \\
 	\pi R(\bar{k}_{uu}^{el} + \bar{k}_{uu}^{el})\delta u_n^2 - N_r\frac{\pi n^2}{R}\delta u_n^2=0
@@ -238,7 +241,7 @@ Since $n$ is a discrete variable, there is no closed-form expression for the min
 
 
 \subsection{Rims with low torsional stiffness}\label{sec:powerlaw_1}
-Many bicycle rims are built from thin-walled open channel sections which have very low torsional stiffness compared with their bending stiffness. Replacing the discrete mode number $n$ with a continuous variable $\bar{n}$, we adopt the following ansatz: (a) $\bar{n}^2 \gg 1$ and (b) $\tilde{\mu}\bar{n}^2 \ll 1$. Under these conditions, Eqn. \ref{eq:Tc_nondim} becomes
+Many bicycle rims are built from thin-walled open channel sections which have very low torsional stiffness $\widetilde{GJ}$ compared with their bending stiffness. Replacing the discrete mode number $n$ with a continuous variable $\bar{n}$, we adopt the following ansatz: (a) $\bar{n}^2 \gg 1$ and (b) $\tilde{\mu}\bar{n}^2 \ll 1$. Under these conditions, Eqn. \ref{eq:Tc_nondim} becomes
 	\begin{equation}\label{eq:Tcn_small_mu}
 	T_{cn} = \frac{2\pi EI_{11}}{n_sR^2} \left( \tilde{\mu}\bar{n}^4 + \frac{\lambda}{\bar{n}^2}\right)
 	\end{equation}
@@ -246,14 +249,14 @@ Minimizing Eqn. \ref{eq:Tcn_small_mu} with respect to $\bar{n}$ by setting the d
 	\begin{equation}\label{eq:nbar_small_mu}
 	\bar{n} = \left(\frac{\lambda}{2\tilde{\mu}} \right)^{1/6}
 	\end{equation}
-Substituting Eqn. \ref{eq:nbar_small_mu} into Eqn. \ref{eq:Tc_small_mu} yields, after simplification, a power law for $T_c$.
+Substituting Eqn. \ref{eq:nbar_small_mu} into Eqn. \ref{eq:Tcn_small_mu} yields a power law for $T_c$.
 	\begin{equation}\label{eq:Tc_small_mu}
 	T_c \approx \frac{11.875}{n_sR^2} \, \left(\bar{k}_{uu}^{el}R^4 \right)^{2/3} (\widetilde{GJ})^{1/3}
 	\end{equation}
 Equation \ref{eq:Tc_small_mu} suggests that when the torsional stiffness is smaller than the bending stiffness, the buckling behavior is dominated by torsion and does not depend explicitly on the bending stiffness at all. Equation \ref{eq:Tc_small_mu} is shown in Fig. \ref{fig:Tc_nondim} next to Eqn. \ref{eq:Tc_nondim} and finite-element calculations. The power law is strictly less than Eqn. \ref{eq:Tc_nondim} which conveniently gives a conservative design criterion.
 
 
-\subsection{Spokes much stiffer than the rim}
+\subsection{Lateral stiffness of spoke system much greater than rim bending stiffness}
 A second power law regime appears when $\lambda \gg 1$ and $\tilde{\mu} \sim 1$. Under these conditions, Eqn. \ref{eq:Tc_nondim} becomes
 	\begin{equation}\label{eq:Tcn_boef}
 	T_{cn} = \frac{2\pi EI_{11}}{n_sR^2}\left(\bar{n}^2 + \frac{\lambda}{\bar{n}^2} \right)
@@ -267,6 +270,8 @@ Substituting Eqn. \ref{eq:TN} for $T_c$ gives $N_{rc}=2\left(\bar{k}_{uu}^{el}EI
 
 
 \section{EQUIVALENT SPRING MODEL}
+The form of Eqn. \ref{eq:Tc_nondim} suggests that the buckling tension is governed by an equivalent stiffness which combines the bending stiffness and torsion stiffness of the rim and the lateral stiffness of the spoke system. Here we will describe an equivalent system of linear springs (Fig. \ref{fig:Kn}) consisting of two springs connected in series representing the torsion and bending stiffnesses of the rim, in parallel with a single spring representing the lateral stiffness of the spoke system.
+
 The lateral stiffness of the wheel can be decomposed into orthogonal modes in the form of Eqn. \ref{eq:modeshape}. Since the Fourier modes are orthogonal, the total strain energy is the sum of the strain energies in each mode.
 	\begin{equation}\label{eq:Umode}
 	U_{total} = U_0 + U_1 + U_2 + ...
@@ -290,11 +295,6 @@ Substituting $U_{rim} + U_{spokes}$ for $U_n$ and inserting the mode shape Eqn. 
 	\begin{equation}\label{eq:un}
 	u_n = \left(\frac{PR^3}{\pi}\right) \frac{EI_{11}+\widetilde{GJ}n^2}{EI_{11}\widetilde{GJ}n^2(n^2-1)^2 + R\bar{k}_{uu}(EI_{11}+\widetilde{GJ}n^2)}
 	\end{equation}
-% The stiffness of the $n$th mode is then defined as
-	% \begin{equation}\label{eq:Kn}
-	% K_n = P/u_n = \left(\frac{\pi}{R^3}\right) \frac{EI_{11}\widetilde{GJ}n^2(n^2-1)^2}{EI_{11}+\widetilde{GJ}n^2} + \pi R \bar{k}_{uu}
-	% \end{equation}
-
 Defining an equivalent torsion stiffness, bending stiffness, and spoke stiffness, the mode stiffness $P/u_n$ can be obtained from Eqn. \ref{eq:un} as
 	\begin{equation}\label{eq:Kn_spring}
 	K_n = \frac{K_{bending}K_{torsion}}{K_{bending}+K_{torsion}} + K_{spokes}
@@ -318,14 +318,11 @@ With this definition, the critical buckling tension for the $n$th mode (Eqn. \re
 In this form, the benefit of adding spoke stiffness becomes readily apparent. Because the rim stiffness and spoke stiffness act in parallel, increasing either one directly impacts the maximum tension.
 
 
-% \section{SUB-CRITICAL BUCKLING UNDER LATERAL LOADS}
-% ...
-
 
 \section{FINITE-ELEMENT CALCULATIONS}
-We validated our theoretical predictions against non-linear finite-element calculations implemented in ABAQUS\textsuperscript{\textregistered} 6.14\footnote{ABAQUS\textsuperscript{\textregistered} is a registered trademark of Dassault Syst\`emes.}. The spokes and rim were both modeled using 2-node linear beam elements including shear flexibility (element type B31 in the ABAQUS library). The rim was interpolated with sufficient elements such that any given beam segment spanned less than 6$^{\circ}$ of the circle. Each spoke was modeled with 10 beam elements to accurately reproduce local spoke buckling.
+We validated our theoretical predictions against non-linear finite-element calculations implemented in ABAQUS\textsuperscript{\textregistered} 6.14\footnote{ABAQUS\textsuperscript{\textregistered} is a registered trademark of Dassault Syst\`emes.}. The spokes and rim were both modeled using 2-node linear beam elements including shear flexibility (element type B31 in the ABAQUS library). The rim was interpolated with sufficient elements such that any given beam segment spanned less than 6$^{\circ}$ of the circle (e.g. 2 rim elements between each spoke for a 36-spoke wheel). Each spoke was modeled with 10 beam elements to accurately reproduce local spoke buckling.
 
-A controlled tensioning strain was applied to the spokes by defining a coefficient of thermal expansion of 1.0 for the spokes (but not the rim) and ramping the temperature down to 150\% of the expected critical buckling strain. Mesh imperfections of the form $\cos{ns/R}$ were added to perturb the initial lateral positions of the rim nodes. Modes starting with $n=2$ up to the expected buckling mode were included. The solution was obtained via an implicit integration procedure (ABAQUS Standard) including non-linear geometric effects.
+A controlled tensioning strain was applied to the spokes by defining a coefficient of thermal expansion of 1.0 for the spokes (but not the rim) and ramping the temperature down to 150\% of the expected critical buckling strain. The initial rim shape was given a geometric imperfection by perturbing the lateral coordinate of the rim nodes by $\cos{ns/R}$. Imperfections starting with $n=2$ up to the expected buckling mode were included. The solution was obtained via an implicit integration procedure (ABAQUS Standard) including non-linear geometric effects.
 
 \begin{figure}[!ht]
 \centering
@@ -341,13 +338,20 @@ The average spoke tension was recorded at each loading step. The buckling tensio
 Therefore the slope of $u/T$ vs. $u$ is $1/T_c$. The buckling tension was also calculated by finding the strain at which the average tension departs from linearity by more than 3\%. The two methods were found to give results in very close agreement.
 
 
-\section{CONCLUSIONS}
-The bicycle wheel relies on spoke tension to support large loads in the radial direction. As a rule-of-thumb, a typical wheel can withstand a load of approximately $2T$ before the bottom-most spokes lose tension. Therefore, higher tension is desirable to increase the radial strength of the wheel. However, we have shown that if the spoke tension is too high, the rim becomes unstable under internal forces, without even considering external loads. Tension---the property which gives a wheel its strength---can also be its downfall.
 
-Our theory points towards some practical design rules: \textbf{(1)} Since the rim bending stiffness and torsional stiffness effectively act like springs in series, the more flexible mode will dominate. Therefore they should be in relative balance. Modern double-walled rims are advantageous in this respect because of their closed cross-section. \textbf{(2)} Since the rim and spoke stiffnesses act like springs in parallel, they can both be increased to roughly equal effect. \textbf{(3)} Since the lateral spoke stiffness scales roughly as $\sin^2{\alpha}$, the most significant factor affecting the spoke stiffness is the cone angle $\alpha$. Even a modest increase in hub width can increase the stiffness and buckling tension dramatically, while having negligible effect on the radial stiffness.
+\section{CONCLUSIONS}
+The bicycle wheel relies on spoke tension to support large loads in the radial direction. As a rule-of-thumb, a typical wheel can withstand a radial load of approximately $2T$ before the bottom-most spokes lose tension. Therefore, higher tension is desirable to increase the strength of the wheel. However, we have shown that if the spoke tension is too high, the rim becomes unstable under internal forces, without even considering external loads. Tension---the property which gives a wheel its strength---can also be its downfall.
+
+Our theory points towards some practical design rules: \textbf{(1)} Since the rim bending stiffness and torsional stiffness effectively act like springs in series, the more flexible mode will dominate. Therefore they should be in relative balance. Modern double-walled rims are advantageous in this respect because of their closed cross-section, while classic single-walled rims are much more flexible in torsion. \textbf{(2)} Since the rim and spoke stiffnesses act like springs in parallel, they can both be increased to roughly equal effect. \textbf{(3)} Since the lateral spoke stiffness scales roughly as $\sin^2{\alpha}$, the most significant factor affecting the spoke stiffness is the cone angle $\alpha$. Even a modest increase in hub width can increase the stiffness and buckling tension dramatically, while having negligible effect on the radial stiffness.
+
+The spokes give a significant contribution to the buckling resistance of bicycle wheels. The spoke system lateral stiffness (Eqn. \ref{eq:kuu}) scales directly with the elastic modulus (material-dependent, but not alloy-dependent) and the cross-sectional area, and inversely with the spoke length (which varies only slightly depending on spoke pattern). It is counter-intuitive that increasing the number of spokes actually slightly \textit{decreases} the buckling tension (due to the factor of $n_s$ appearing in $T_e$ in Eqn. \ref{eq:Tc_nondim}). However, increasing the number of spokes also reduces the fraction of load transferred to a single spoke and thus reduces the required tension. The net effect is that more spokes results in a stronger wheel.
 
 One might wonder, why do practically all wheels fail in the $n=2$ mode, when higher modes are possible? We offer three speculative possibilities: \textbf{(1)} the geometry and stiffness of wheels are such that most wheels fall into the $n=2$ regime of Fig. \ref{fig:Tc_nondim}. \textbf{(2)} Wheels which would buckle into higher modes typically fail in other manners first (such as spoke yielding or nipple fracture). \textbf{(3)} Rim failure is usually accompanied by spoke buckling, which reduces the effective wheel stiffness and in turn favors the $n=2$ mode. Preliminary non-linear finite-element simulations of wheel failure under external loads provide some evidence for (3), but more work is required to apply our analysis to real-world wheels.
 
+
+
+\section*{ACKNOWLEDGEMENTS}
+This material is based upon work supported by the National Science Foundation Graduate Research Fellowship Program under Grant No. DGE-1324585. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the National Science Foundation.
 
 
 \bibliographystyle{naturemag}
@@ -375,7 +379,7 @@ $f_1, f_2,f_3$ & Vector components of $\bm{f}$\\
 $\bm{k}_f$	& Stiffness matrix for a single spoke\\
 $\bar{\bm{k}}$ & Equivalent stiffness per-unit-length of the spoke system. $\bar{\bm{k}} = \bar{\bm{k}}^{el} + \bar{\bm{k}}^{tens}$\\
 $\bar{\bm{k}}^{el},\bar{\bm{k}}^{tens}$ & Part of $\bar{\bm{k}}$ proportional to $E_sA_s$ and $T$, respectively\\
-$\bar{k}_{ij}$ & Tensor components of $\bar{\bm{k}}$\\
+$\bar{k}_{ij}$ & Matrix components of $\bar{\bm{k}}$\\
 $\e,\ee,\eee$ & Coordinate axes defined at the rim shear center\\
 $s$			& Arc-length coordinate along the rim\\
 $\kappa_1,\kappa_2,\kappa_3$ & Spatial curvature of the rim\\
@@ -393,8 +397,8 @@ $T_{cn}$	& Critical spoke tension for the $n$th mode\\
 $T_c$		& Critical buckling tension (minimum of $T_{cn}$ over all modes)\\
 $T_e$		& ``Euler'' tension--tension which would produce an axial force in the rim
 			  equal to the buckling load for a straight beam-column of length $2\pi R$\\
-$R$			& Rim radius--measured from the rim shear center\\
-$E$			& Rim Young's modulus\\
+$R$			& Rim radius measured from the rim shear center\\
+$E, G$		& Rim Young's modulus and shear modulus\\
 $I_{11}$	& Second moment of area of the rim in the lateral direction\\
 $J$			& Rim torsion constant\\
 $I_w$		& Rim warping constant\\
