@@ -360,9 +360,9 @@ This material is based upon work supported by the National Science Foundation Gr
 
 \newpage
 \section*{LIST OF TERMS}
-A partial list of symbols is given below. Other symbols are defined in-place or not re-used.
 
-
+\begin{table}[ht!]
+\caption{A partial list of symbols is given below. Other symbols are defined in-place or not re-used.}
 \begin{tabular}{c|p{12cm}}
 \hline
 \textit{\textbf{Term}} & \textit{\textbf{Definition}} \\
@@ -410,17 +410,53 @@ $\lambda$	& Ratio of spoke system lateral stiffness to rim bending stiffness OR 
 			  of rim radius to the characteristic length of a beam on an elastic foundation.\\
 \hline
 \end{tabular}
+\end{table}
 
 
 \newpage
 \section*{FINITE-ELEMENT RESULTS}
-For all the following wheels: $R=0.3$ m, $EI_{11}=EI_{22}=69.0$ N-m$^2$, $GJ=26.0$ N-m$^2$, 
+For all the following wheels: $R=0.3$ m, $EI_{11}=EI_{22}=69.0$ N-m$^2$, $GJ=26.0$ N-m$^2$, $I_w=0$, $E_s=210$ GPa. The cross-sectional area of the rim is 100 mm$^2$. All length measurements in the following table are given in mm. $T_c$ is reported in Newtons. Hub flange width is the distance from the drive-side flange to the left-side flange. Hub flange diameter is the diameter of the circle that passes through the centers of the spoke eyelets.
 
-\begin{tabular}{c|c|c}
-$n_s$ & Hub flange width [mm] & Hub flange diameter [mm]\\
+\begin{table}[ht!]
+\caption{Parameters for FEA simulations shown in Fig \ref{fig:Tc_nondim} (b).}
+\begin{tabular}{c|c|c|c|c|c}
 \hline
-
+$n_s$	& Spoke diameter	& Hub flange width	& Hub flange diameter	& $T_c$ ABAQUS	& $T_c$ theory\\
+\hline
+36		& 0.693				& 50				& 40					& 477			& 475\\
+36		& 0.981				& 50				& 40					& 668			& 704\\
+\hline
+48		& 1.040				& 50				& 40					& 694			& 698\\
+48		& 1.201				& 50				& 40					& 862			& 870\\
+48		& 1.343				& 50				& 40					& 956			& 942\\
+48		& 1.471				& 50				& 40					& 1021			& 1005\\
+48		& 1.900				& 50				& 40					& 1270			& 1259\\
+48		& 1.943				& 60				& 40					& 1563			& 1573\\
+\hline
+64		& 1.671				& 60				& 40					& 1450			& 1418\\
 \end{tabular}
+\end{table}
 
+For all the following wheels: $n_s=36$, $R=0.3$ m, hub flange width = $50$ mm, hub flange diameter = $40$ mm, spoke diameter = $0.981$ mm, $EI_{11}=EI_{22}=69.0$ N-m$^2$, $I_w=0$, $E_s=210$ GPa. $GJ$ varies with $\mu$ given in the table below. The cross-sectional area of the rim is 100 mm$^2$. $T_c$ is reported in Newtons.
+
+\begin{table}[ht!]
+\centering
+\caption{Parameters for FEA simulations shown in Fig \ref{fig:Tc_nondim} (c).}
+\begin{tabular}{c|c|c}
+\hline
+$\mu$	& $T_c$ ABAQUS & $T_c$ theory\\
+\hline
+0.001	& 154	& 121 \\
+0.00215	& 191	& 157 \\
+0.00464	& 220	& 212 \\
+0.01	& 264	& 258 \\
+0.0215	& 359	& 344 \\
+0.0464	& 501	& 487 \\
+0.1		& 556	& 574 \\
+0.215	& 624	& 646 \\
+0.464	& 701	& 723 \\
+1		& 759	& 785 \\
+\end{tabular}
+\end{table}
 
 \end{document}
