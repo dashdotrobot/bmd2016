@@ -1,3 +1,4 @@
+# LaTeX
 *.aux
 *.glo
 *.idx
@@ -22,3 +23,6 @@
 *.out
 *.synctex.gz
 *-eps-converted-to.pdf
+
+# Jupyter
+.ipynb_checkpoints/
